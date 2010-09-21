@@ -10,7 +10,10 @@ begin
     gem.email = "mguterl@gmail.com"
     gem.homepage = "http://github.com/mguterl/board-client"
     gem.authors = ["Michael Guterl"]
-    gem.add_development_dependency "rspec", ">= 1.2.9"
+    gem.add_dependency "rest-client", "~> 1.6.1"
+    gem.add_dependency "yajl-ruby", "~> 0.7.7"
+    gem.add_development_dependency "rspec", "~> 1.3.0"
+    gem.add_development_dependency "webmock", "~> 1.3.5"
     # gem is a Gem::Specification... see http://www.rubygems.org/read/chapter/20 for additional settings
   end
   Jeweler::GemcutterTasks.new
@@ -29,8 +32,6 @@ Spec::Rake::SpecTask.new(:rcov) do |spec|
   spec.pattern = 'spec/**/*_spec.rb'
   spec.rcov = true
 end
-
-task :spec => :check_dependencies
 
 task :default => :spec
 
