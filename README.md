@@ -1,6 +1,10 @@
 # board-client
 
-Description goes here.
+    client = Board::Client.new('YOUR_API_KEY_HERE')
+
+    invitation = client.create_invitation(:first_name => "Michael",
+                                          :last_name  => "Jordan",
+                                          :email      => "michael.jordan@nike.com")
 
 ## Note on Patches/Pull Requests
 
