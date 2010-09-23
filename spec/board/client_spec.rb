@@ -34,9 +34,9 @@ describe Board::Client do
 
     context 'when successful' do
       it 'should return a hash representing the saved invitation' do
-        response = client.create_candidate_invitation(:first_name => "Michael",
-                                                      :last_name  => "Jordan",
-                                                      :email      => "michael.jordan@nike.com")
+        response = client.candidate_invitations.create(:first_name => "Michael",
+                                                       :last_name  => "Jordan",
+                                                       :email      => "michael.jordan@nike.com")
         response.should == {
           "id"              => 3,
           "first_name"      => "foo",
