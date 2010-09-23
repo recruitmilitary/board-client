@@ -18,8 +18,8 @@ module Board
       @url     = url
     end
 
-    def create_invitation(params)
-      post @url + "/invitations", params
+    def create_candidate_invitation(params)
+      post @url + "/candidate_invitations", params
     end
 
     private

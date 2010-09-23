@@ -3,7 +3,7 @@ require 'spec_helper'
 describe Board::Client do
 
   before do
-    stub_request(:post, "https://board.recruitmilitary.com/api/v1/invitations").
+    stub_request(:post, "https://board.recruitmilitary.com/api/v1/candidate_invitations").
       with(:body => {
              "first_name" => "Michael",
              "email" => "michael.jordan@nike.com",
@@ -34,9 +34,9 @@ describe Board::Client do
 
     context 'when successful' do
       it 'should return a hash representing the saved invitation' do
-        response = client.create_invitation(:first_name => "Michael",
-                                            :last_name  => "Jordan",
-                                            :email      => "michael.jordan@nike.com")
+        response = client.create_candidate_invitation(:first_name => "Michael",
+                                                      :last_name  => "Jordan",
+                                                      :email      => "michael.jordan@nike.com")
         response.should == {
           "id"              => 3,
           "first_name"      => "foo",
