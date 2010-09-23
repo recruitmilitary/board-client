@@ -24,6 +24,10 @@ module Board
       @candidate_invitations ||= API::CandidateInvitations.new(@api_key, @url)
     end
 
+    def users
+      @users ||= API::Users.new(@api_key, @url)
+    end
+
   end
 
 end
