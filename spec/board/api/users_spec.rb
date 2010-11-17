@@ -7,6 +7,9 @@ describe Board::API::Users do
   before do
     stub_request(:get, "https://board.recruitmilitary.com/api/v1/users?email=jerry@seinfeld.com&user_credentials=VALID_KEY").
       to_return(:body => %q{[{"id":1,"last_name":"Seinfeld","first_name":"Jerry","email":"jerry@seinfeld.com"}]})
+
+    stub_request(:get, "https://board.recruitmilitary.com/api/v1/users/unsubscribe?email=jerry@seinfeld.com&user_credentials=VALID_KEY").
+      to_return(:body => %q{"2010-11-17T15:09:57-05:00"})
   end
 
   describe "#find" do
@@ -18,6 +21,15 @@ describe Board::API::Users do
                             "last_name" => "Seinfeld",
                             "first_name" => "Jerry",
                             "email" => "jerry@seinfeld.com"}]
+    end
+
+  end
+
+  describe "#unsubscribe" do
+
+    it 'should return a date' do
+      response = client.users.unsubscribe(:email => 'jerry@seinfeld.com')
+      DateTime.parse(response).should be_kind_of(DateTime)
     end
 
   end

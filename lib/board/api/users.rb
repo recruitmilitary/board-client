@@ -7,6 +7,9 @@ module Board
         get @url + "/users", params
       end
 
+      def unsubscribe(params)
+        get @url + "/users/unsubscribe", params
+      end
     end
 
   end

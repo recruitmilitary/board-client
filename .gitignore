@@ -20,3 +20,6 @@ rdoc
 pkg
 
 ## PROJECT::SPECIFIC
+
+## RubyMine
+.idea
