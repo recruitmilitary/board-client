@@ -8,6 +8,8 @@ require 'board/api'
 
 module Board
 
+  autoload :CandidateSearch, 'board/candidate_search'
+
   class Client
 
     class << self

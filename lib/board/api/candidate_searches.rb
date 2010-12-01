@@ -1,9 +1,9 @@
 module Board::API
 
   class CandidateSearches < Base
-
+    
     def create(params)
-      get @url + "/candidate_searches", params
+      Board::CandidateSearch.new(@api_key, @url, params)
     end
 
   end
