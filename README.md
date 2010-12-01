@@ -2,6 +2,26 @@
 
     client = Board::Client.new('YOUR_API_KEY_HERE')
 
+## candidate searches
+
+    search = client.candidate_search(:keywords => "ruby",
+                                     :distance => 50,
+                                     :location => "Cincinnati, OH")
+
+iterate through current page of results
+
+    search.results.each do |result|
+
+    end
+
+iterate through all pages and yield result
+
+    search.each_result do |result|
+
+    end
+
+## invitations
+
     invitation = client.create_invitation(:first_name => "Michael",
                                           :last_name  => "Jordan",
                                           :email      => "michael.jordan@nike.com")

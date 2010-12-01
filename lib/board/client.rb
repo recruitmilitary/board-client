@@ -28,6 +28,10 @@ module Board
       @users ||= API::Users.new(@api_key, @url)
     end
 
+    def candidate_search(params)
+      API::CandidateSearches.new(@api_key, @url).create(params)
+    end
+
   end
 
 end
