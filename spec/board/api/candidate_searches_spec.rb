@@ -17,11 +17,11 @@ describe Board::API::CandidateSearches do
   describe "searching" do
 
     it 'returns the number of search results' do
-      search['total'].should == 101
+      search.total.should == 101
     end
 
     it 'returns the current page' do
-      search['current_page'].should == 1
+      search.current_page.should == 1
     end
 
   end
