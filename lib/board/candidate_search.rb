@@ -6,12 +6,10 @@ module Board
 
     attr_reader :params
 
-    def initialize(api_key, base_url, params)
-      @api_key  = api_key
-      @base_url = base_url
-      @params   = params
-
+    def initialize(*args)
+      @params = args.pop
       self.current_page = params[:current_page] || 1
+      super
     end
 
     def each_result
