@@ -4,11 +4,11 @@ module Board
     class Users < Base
 
       def find(params)
-        get @url + "/users", params
+        get "/users", params
       end
 
       def unsubscribe(params)
-        get @url + "/users/unsubscribe", params
+        get "/users/unsubscribe", params
       end
     end
 

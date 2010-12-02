@@ -3,26 +3,35 @@ module Board
 
     class Base
 
-      def initialize(api_key, url)
-        @api_key = api_key
-        @url     = url
+      def initialize(api_key, base_url)
+        @api_key  = api_key
+        @base_url = base_url
       end
 
       private
 
       def get(*args)
-        url = args.shift
-        params = args.shift.merge(:user_credentials => @api_key)
-
-        response = RestClient.get(url, { :params => params, :accept => :json })
-        decode_json(response.body)
+        request(:get, *args)
       end
 
       def post(*args)
-        url = args.shift
-        params = args.shift.merge(:user_credentials => @api_key)
+        request(:post, *args)
+      end
 
-        response = RestClient.post(url, encode_json(params), :content_type => :json, :accept => :json)
+      def request(http_method, *args)
+        path   = args.shift
+        params = args.shift.merge(:user_credentials => @api_key)
+        url    = @base_url + path
+
+        response = case http_method
+        when :get
+          RestClient.get(url, { :params => params, :accept => :json })
+        when :post
+          RestClient.post(url, encode_json(params), :content_type => :json, :accept => :json)
+        else
+          raise ArgumentError, "unknown http method: #{http_method}"
+        end
+
         decode_json(response.body)
       end
 
