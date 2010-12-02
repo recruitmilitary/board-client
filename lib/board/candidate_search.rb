@@ -26,16 +26,16 @@ module Board
       (total / per_page.to_f).ceil
     end
 
-    def per_page
-      params[:per_page] || DEFAULT_PER_PAGE
-    end
-
     def results
       response['results']
     end
 
     def total
       response['total']
+    end
+
+    def per_page
+      params[:per_page] || DEFAULT_PER_PAGE
     end
 
     def current_page
