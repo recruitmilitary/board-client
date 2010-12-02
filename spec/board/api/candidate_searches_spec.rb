@@ -3,7 +3,6 @@ require 'spec_helper'
 describe Board::API::CandidateSearches do
 
   let(:client) { Board::Client.new('VALID_KEY') }
-  let(:search) { client.candidate_search(:keywords => "ruby") }
 
   before do
     stub_request(:get, "https://board.recruitmilitary.com/api/v1/candidate_searches").
@@ -20,9 +19,23 @@ describe Board::API::CandidateSearches do
              'current_page'     => '2',
            }).
       to_return(:body => %q{{"results":[{"email":"candidate@recruitmilitary.com","zip_code":null,"last_activity_at":"2010-11-24T14:13:26Z","phone":null,"state":"OH","last_name":"Smith","first_name":"Rodolfo","resume_url":null,"location":"Hagenesside, OH","city":"Hagenesside"},{"email":"benton@effertz.info","zip_code":null,"last_activity_at":"2010-11-16T14:13:26Z","phone":null,"state":"OH","last_name":"Bins","first_name":"Alfred","resume_url":null,"location":"East Elizabeth, OH","city":"East Elizabeth"},{"email":"melba@armstrong.us","zip_code":null,"last_activity_at":"2010-11-22T14:13:27Z","phone":null,"state":"OH","last_name":"Pouros","first_name":"Warren","resume_url":null,"location":"Margemouth, OH","city":"Margemouth"},{"email":"yvette@lynch.name","zip_code":null,"last_activity_at":"2010-11-25T14:13:27Z","phone":null,"state":"OH","last_name":"Denesik","first_name":"Isai","resume_url":null,"location":"Lake Othaton, OH","city":"Lake Othaton"},{"email":"hipolito.mosciski@schoenbrown.uk","zip_code":null,"last_activity_at":"2010-11-25T14:13:28Z","phone":null,"state":"OH","last_name":"Paucek","first_name":"Cristina","resume_url":"https://localhost/resumes/1/resume.pdf","location":"East Aiden, OH","city":"East Aiden"}],"current_page":2,"total":15}})
+    stub_request(:get, "https://board.recruitmilitary.com/api/v1/candidate_searches").
+      with(:query => {
+             'user_credentials' => 'VALID_KEY',
+             'per_page'         => '501',
+             'current_page'     => '1',
+           }).
+      to_return(:body   => %q{[["per_page", "must be less than or equal to 500"]]},
+                :status => 422)
   end
 
-  describe "searching" do
+  describe "searching", "when valid" do
+
+    let(:search) { client.candidate_search(:keywords => "ruby") }
+
+    it 'is valid' do
+      search.should be_valid
+    end
 
     it 'returns the number of search results' do
       search.total.should == 15
@@ -46,6 +59,20 @@ describe Board::API::CandidateSearches do
         results << result
       end
       results.size.should == search.total
+    end
+
+  end
+
+  describe "searching", "when invalid" do
+
+    let(:search) { client.candidate_search(:per_page => 501) }
+
+    before do
+      search.should_not be_valid
+    end
+
+    it 'returns a collection of errors' do
+      search.errors.should == [["per_page", "must be less than or equal to 500"]]
     end
 
   end

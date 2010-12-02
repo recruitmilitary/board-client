@@ -46,6 +46,12 @@ module Board
       params[:current_page] = value
     end
 
+    def valid?
+      response && errors.blank?
+    end
+
+    attr_reader :errors
+
     private
 
     def clear
@@ -54,6 +60,8 @@ module Board
 
     def response
       @response ||= get "/candidate_searches", params
+    rescue RestClient::Exception => e
+      @errors = decode_json(e.response)
     end
 
   end
