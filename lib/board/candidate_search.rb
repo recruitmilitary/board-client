@@ -13,7 +13,7 @@ module Board
     end
 
     def each_result
-      (current_page..total_pages).each do |page|
+      (1..total_pages).each do |page|
         self.current_page = page
         results.each do |result|
           yield result
