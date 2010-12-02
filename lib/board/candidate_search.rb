@@ -8,13 +8,13 @@ module Board
 
     def initialize(*args)
       @params = args.pop
-      self.current_page = params[:current_page] || 1
+      self.page = params[:page] || 1
       super
     end
 
     def each_result
       (1..total_pages).each do |page|
-        self.current_page = page
+        self.page = page
         results.each do |result|
           yield result
         end
@@ -38,16 +38,16 @@ module Board
       params[:per_page] || DEFAULT_PER_PAGE
     end
 
-    def current_page
-      params[:current_page]
+    def page
+      params[:page]
     end
 
-    def current_page=(value)
-      params[:current_page] = value
+    def page=(value)
+      params[:page] = value
     end
 
     def valid?
-      response && errors.blank?
+      response && (errors.nil? || errors.size == 0)
     end
 
     attr_reader :errors
@@ -56,6 +56,7 @@ module Board
 
     def clear
       @response = nil
+      @errors   = nil
     end
 
     def response
