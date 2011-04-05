@@ -10,6 +10,9 @@ describe Board::API::Users do
 
     stub_request(:get, "https://board.recruitmilitary.com/api/v1/users/unsubscribe?email=jerry@seinfeld.com&user_credentials=VALID_KEY").
       to_return(:body => %q{{"unsubscribed_at":"2010-11-17T15:09:57-05:00"}})
+
+    stub_request(:get, "https://board.recruitmilitary.com/api/v1/users/invalid?email=jerry@seinfeld.com&user_credentials=VALID_KEY").
+      to_return(:body => %q{{"email_invalid_at":"2010-11-17T15:09:57-05:00"}})
   end
 
   describe "#find" do
@@ -33,6 +36,14 @@ describe Board::API::Users do
       response.should == { 'unsubscribed_at' => "2010-11-17T15:09:57-05:00" }
     end
 
+  end
+
+  describe "#invalid" do
+    it 'returns the date the user was marked invalid' do
+      response = client.users.invalid(:email => 'jerry@seinfeld.com')
+
+      response.should == { 'email_invalid_at' => '2010-11-17T15:09:57-05:00' }
+    end
   end
 
 end
