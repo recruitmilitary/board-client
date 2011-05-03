@@ -1,16 +1,12 @@
-require 'rubygems'
-require 'bundler/setup'
-
-require 'rest_client'
 require 'yajl'
 
-require 'board/api'
+require 'board/request'
+require 'board/candidate_search'
 
 module Board
-
-  autoload :CandidateSearch, 'board/candidate_search'
-
   class Client
+
+    include Request
 
     class << self
       attr_accessor :default_url
@@ -22,18 +18,25 @@ module Board
       @url     = url
     end
 
-    def candidate_invitations
-      @candidate_invitations ||= API::CandidateInvitations.new(@api_key, @url)
+    def candidate_searches(params)
+      get "/candidate_searches", params
     end
 
-    def users
-      @users ||= API::Users.new(@api_key, @url)
+    def find_user(params)
+      get "/users", params
     end
 
-    def candidate_search(params)
-      API::CandidateSearches.new(@api_key, @url).create(params)
+    def mark_user_invalid(params)
+      get "/users/invalid", params
+    end
+
+    def unsubscribe(params)
+      get "/users/unsubscribe", params
+    end
+
+    def create_candidate_invitation(params)
+      post "/candidate_invitations", params
     end
 
   end
-
 end

@@ -1,68 +1,28 @@
 module Board
 
-  class CandidateSearch < API::Base
+  class CandidateSearch
 
-    DEFAULT_PER_PAGE = 10
-
-    attr_reader :params
-
-    def initialize(*args)
-      @params = args.pop
-      self.page = params[:page] || 1
-      super
-    end
-
-    def each_result
-      (1..total_pages).each do |page|
-        self.page = page
-        results.each do |result|
-          yield result
-        end
-        clear
-      end
-    end
-
-    def total_pages
-      (total / per_page.to_f).ceil
+    def initialize(client, params = {})
+      @client = client
+      @params = params
     end
 
     def results
-      response['results']
+      @client.candidate_searches(@params)['results']
     end
 
-    def total
-      response['total']
-    end
+    def each_result
+      initial_search = @client.candidate_searches(@params)
+      total = initial_search['total']
+      pages = (total / 10.0).ceil
 
-    def per_page
-      params[:per_page] || DEFAULT_PER_PAGE
-    end
+      initial_search['results'].each { |r| yield r }
 
-    def page
-      params[:page]
-    end
-
-    def page=(value)
-      params[:page] = value
-    end
-
-    def valid?
-      response && (errors.nil? || errors.size == 0)
-    end
-
-    attr_reader :errors
-
-    private
-
-    def clear
-      @response = nil
-      @errors   = nil
-    end
-
-    def response
-      @response ||= get "/candidate_searches", params
-    rescue RestClient::Exception => e
-      @errors = decode_json(e.response)
+      (2..pages).each do |page|
+        search = @client.candidate_searches(@params.merge(:page => page))
+        results = search['results']
+        results.each { |r| yield r }
+      end
     end
 
   end
