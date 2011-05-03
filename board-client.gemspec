@@ -5,11 +5,11 @@
 
 Gem::Specification.new do |s|
   s.name = %q{board-client}
-  s.version = "0.1.0"
+  s.version = "0.2.0"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Michael Guterl"]
-  s.date = %q{2011-04-05}
+  s.date = %q{2011-05-03}
   s.description = %q{A ruby wrapper for the board platform.}
   s.email = %q{mguterl@gmail.com}
   s.extra_rdoc_files = [
@@ -26,16 +26,10 @@ Gem::Specification.new do |s|
     "VERSION",
     "board-client.gemspec",
     "lib/board-client.rb",
-    "lib/board/api.rb",
-    "lib/board/api/base.rb",
-    "lib/board/api/candidate_invitations.rb",
-    "lib/board/api/candidate_searches.rb",
-    "lib/board/api/users.rb",
     "lib/board/candidate_search.rb",
     "lib/board/client.rb",
-    "spec/board/api/candidate_invitations_spec.rb",
-    "spec/board/api/candidate_searches_spec.rb",
-    "spec/board/api/users_spec.rb",
+    "lib/board/request.rb",
+    "spec/board/candidate_search_spec.rb",
     "spec/board/client_spec.rb",
     "spec/spec.opts",
     "spec/spec_helper.rb"
@@ -45,9 +39,7 @@ Gem::Specification.new do |s|
   s.rubygems_version = %q{1.5.2}
   s.summary = %q{A ruby wrapper for the board platform}
   s.test_files = [
-    "spec/board/api/candidate_invitations_spec.rb",
-    "spec/board/api/candidate_searches_spec.rb",
-    "spec/board/api/users_spec.rb",
+    "spec/board/candidate_search_spec.rb",
     "spec/board/client_spec.rb",
     "spec/spec_helper.rb"
   ]
