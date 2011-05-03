@@ -93,4 +93,14 @@ describe Board::Client do
     end
   end
 
+  describe '#candidates' do
+    it 'performs the correct request' do
+      client.find_candidate(42)
+
+      last_request.path.should == '/candidates/42'
+      last_request.method.should == :get
+      last_request.params.should == {}
+    end
+  end
+
 end

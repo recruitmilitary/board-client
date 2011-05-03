@@ -38,5 +38,9 @@ module Board
       post "/candidate_invitations", params
     end
 
+    def find_candidate(candidate_id)
+      get "/candidates/#{candidate_id}", {}
+    end
+
   end
 end
