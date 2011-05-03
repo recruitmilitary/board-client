@@ -53,14 +53,14 @@ Gem::Specification.new do |s|
       s.add_runtime_dependency(%q<rest-client>, ["~> 1.6.1"])
       s.add_runtime_dependency(%q<yajl-ruby>, ["~> 0.7.7"])
       s.add_development_dependency(%q<rspec>, ["~> 1.3.0"])
-      s.add_development_dependency(%q<webmock>, ["~> 1.3.5"])
+      s.add_development_dependency(%q<webmock>, ["~> 1.6.2"])
     else
       s.add_dependency(%q<rest-client>, ["~> 1.6.1"])
       s.add_dependency(%q<yajl-ruby>, ["~> 0.7.7"])
       s.add_dependency(%q<rest-client>, ["~> 1.6.1"])
       s.add_dependency(%q<yajl-ruby>, ["~> 0.7.7"])
       s.add_dependency(%q<rspec>, ["~> 1.3.0"])
-      s.add_dependency(%q<webmock>, ["~> 1.3.5"])
+      s.add_dependency(%q<webmock>, ["~> 1.6.2"])
     end
   else
     s.add_dependency(%q<rest-client>, ["~> 1.6.1"])
@@ -68,7 +68,7 @@ Gem::Specification.new do |s|
     s.add_dependency(%q<rest-client>, ["~> 1.6.1"])
     s.add_dependency(%q<yajl-ruby>, ["~> 0.7.7"])
     s.add_dependency(%q<rspec>, ["~> 1.3.0"])
-    s.add_dependency(%q<webmock>, ["~> 1.3.5"])
+    s.add_dependency(%q<webmock>, ["~> 1.6.2"])
   end
 end
 

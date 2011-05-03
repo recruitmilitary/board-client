@@ -8,5 +8,5 @@ require 'webmock/rspec'
 require 'yajl/json_gem' # required for webmock
 
 Spec::Runner.configure do |config|
-  config.include WebMock
+  config.include WebMock::API
 end
