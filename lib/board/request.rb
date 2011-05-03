@@ -1,6 +1,14 @@
 module Board
   module Request
 
+    class Error < StandardError
+      attr_reader :response
+
+      def initialize(response)
+        @response = response
+      end
+    end
+
     private
 
     def post(path, params)
@@ -22,7 +30,12 @@ module Board
                    uri = URI.parse(@url + path)
                    Net::HTTP.post_form(uri, params)
                  end
-      Yajl::Parser.parse(response.body)
+
+      if response.code =~ /2../
+        Yajl::Parser.parse(response.body)
+      else
+        raise Error.new(response)
+      end
     end
 
     def hash_to_query_string(hash)

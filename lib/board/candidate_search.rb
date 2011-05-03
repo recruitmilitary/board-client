@@ -2,17 +2,19 @@ module Board
 
   class CandidateSearch
 
+    attr_reader :errors
+
     def initialize(client, params = {})
       @client = client
       @params = params
+      @errors = []
     end
 
     def results
-      @client.candidate_searches(@params)['results']
+      initial_search['results']
     end
 
     def each_result
-      initial_search = @client.candidate_searches(@params)
       total = initial_search['total']
       pages = (total / 10.0).ceil
 
@@ -24,6 +26,19 @@ module Board
         results.each { |r| yield r }
       end
     end
+
+    def valid?
+      perform_search and @errors.empty?
+    end
+
+    private
+
+    def initial_search
+      @initial_search ||= @client.candidate_searches(@params)
+    rescue Board::Request::Error => e
+      @errors = Yajl::Parser.parse(e.response.body)
+    end
+    alias perform_search initial_search
 
   end
 
