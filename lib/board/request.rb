@@ -1,3 +1,6 @@
+require 'uri'
+require 'net/http'
+
 module Board
   module Request
 
