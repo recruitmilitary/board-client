@@ -1,5 +1,6 @@
 require 'uri'
 require 'net/http'
+require 'net/https'
 
 module Board
   module Request
@@ -25,14 +26,20 @@ module Board
     def request(path, params, method)
       params.merge!(:user_credentials => @api_key)
 
-      response = case method
-                 when :get
-                   uri = URI.parse(@url + path + "?" + hash_to_query_string(params))
-                   Net::HTTP.get_response(uri)
-                 when :post
-                   uri = URI.parse(@url + path)
-                   Net::HTTP.post_form(uri, params)
-                 end
+      uri = URI.parse(@url + path)
+      http = Net::HTTP.new(uri.host, uri.port)
+      http.use_ssl = true
+      http.verify_mode = OpenSSL::SSL::VERIFY_NONE
+
+      case method
+      when :get
+        request = Net::HTTP::Get.new(uri.request_uri)
+      when :post
+        request = Net::HTTP::Post.new(uri.request_uri)
+      end
+
+      request.set_form_data(params)
+      response = http.request(request)
 
       if response.code =~ /2../
         Yajl::Parser.parse(response.body)
