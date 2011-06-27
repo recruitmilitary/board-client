@@ -28,8 +28,11 @@ module Board
 
       uri = URI.parse(@url + path)
       http = Net::HTTP.new(uri.host, uri.port)
-      http.use_ssl = true
-      http.verify_mode = OpenSSL::SSL::VERIFY_NONE
+
+      if uri.port == 443 # ssl?
+        http.use_ssl = true
+        http.verify_mode = OpenSSL::SSL::VERIFY_PEER
+      end
 
       case method
       when :get
