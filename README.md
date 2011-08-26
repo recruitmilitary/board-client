@@ -1,30 +1,67 @@
-# board-client
+# Board::Client
 
-    client = Board::Client.new('YOUR_API_KEY_HERE')
+## TODO
 
-## candidate searches
+* Organization / User update add organization to user or add user to organization
 
-    search = client.candidate_search(:keywords => "ruby",
-                                     :distance => 50,
-                                     :location => "Cincinnati, OH")
+## Usage
 
-iterate through current page of results
+    board = Board::Client.new('YOUR_API_KEY_HERE')
 
-    search.results.each do |result|
+### Search
 
-    end
+All methods named search return search object that support a few elements of convenience.  Each search API returns a similar format and supports similar options.
 
-iterate through all pages and yield result
+    search.results # current page of results
+    search.each_result { |result| p result } # iterate through all pages of results
+    search.total # total number of results
+    search.page # current page number
 
-    search.each_result do |result|
+### User Search
 
-    end
+    # should this mimic candidate search with keywords?
+    board.users.search(:email => "foo@bar.com")
 
-## invitations
+### User Create
 
-    invitation = client.create_invitation(:first_name => "Michael",
-                                          :last_name  => "Jordan",
-                                          :email      => "michael.jordan@nike.com")
+    user = board.users.create(:email      => "foo@bar.com",
+                              :first_name => "Bob",
+                              :last_name  => "Smith")
+
+    user.email      # => "foo@bar.com"
+    user.first_name # => "Bob"
+    user.last_name  # => "Smith"
+    user.id         # => 42
+
+### Organization Search
+
+    board.organizations.search(:name => "Nike")
+
+### Organization Create
+
+    organization = board.organizations.create(:name => "Nike"
+                                              :url  => "http://nike.com")
+
+    organization.name # => "Nike"
+    organization.url  # => "http://nike.com"
+    organization.id   # => 9
+
+### Candidate Search
+
+    board.candidates.search(:keywords => "ruby",
+                            :distance => 50,
+                            :location => "Cincinnati, OH")
+
+### Candidate Invitations
+
+    invitation = client.candidates.invitation(:first_name => "Michael",
+                                              :last_name  => "Jordan",
+                                              :email      => "michael.jordan@nike.com")
+
+    invitation.url        # => "https://board.recruitmilitary.com/invitations/abcdefghijklmnopqrstuvwxyz0123456789"
+    invitation.first_name # => "Michael"
+    invitation.last_name  # => "Jordan"
+    invitation.email      # => "michael.jordan@nike.com"
 
 ## Note on Patches/Pull Requests
 
@@ -38,4 +75,4 @@ iterate through all pages and yield result
 
 ## Copyright
 
-Copyright (c) 2010 Michael Guterl. See LICENSE for details.
+Copyright (c) 2011 Michael Guterl. See LICENSE for details
