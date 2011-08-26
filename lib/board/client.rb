@@ -44,6 +44,7 @@ module Board
       get "/candidates/#{candidate_id}", {}
     end
 
+    autoload :API, 'board/client/api'
     autoload :Users, 'board/client/users'
     autoload :Candidates, 'board/client/candidates'
 
