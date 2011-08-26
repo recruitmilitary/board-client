@@ -22,6 +22,11 @@ All methods named search return search object that support a few elements of con
     # should this mimic candidate search with keywords?
     board.users.search(:email => "foo@bar.com")
 
+    # should this just be a special method?
+    board.users.find(42) # by id
+    board.users.find(:email => "foo@bar.com")
+    board.users.find(:email_md5 => "asdfasdf")
+
 ### User Create
 
     user = board.users.create(:email      => "foo@bar.com",
@@ -45,6 +50,10 @@ All methods named search return search object that support a few elements of con
     organization.name # => "Nike"
     organization.url  # => "http://nike.com"
     organization.id   # => 9
+
+### Organization Add User
+
+    board.organizations.add_user(:organization_id => organization.id, :user_id => 42)
 
 ### Candidate Search
 
