@@ -10,7 +10,11 @@ module Board
     end
 
     def find(id)
-      Hashie::Mash.new(@client.get("/users/#{id}"))
+      if id.is_a?(Hash)
+        Hashie::Mash.new(@client.get("/users", id))
+      else
+        Hashie::Mash.new(@client.get("/users/#{id}"))
+      end
     end
 
   end

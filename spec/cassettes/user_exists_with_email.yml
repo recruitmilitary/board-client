@@ -1,0 +1,30 @@
+--- 
+- !ruby/struct:VCR::HTTPInteraction 
+  request: !ruby/struct:VCR::Request 
+    method: :get
+    uri: http://localhost:3000/api/v1/users
+    body: email=candidate%40recruitmilitary.com&user_credentials=Bdrc3t1LaiWtygbJ4jD6
+    headers: 
+      content-type: 
+      - application/x-www-form-urlencoded
+  response: !ruby/struct:VCR::Response 
+    status: !ruby/struct:VCR::ResponseStatus 
+      code: 200
+      message: OK
+    headers: 
+      x-ua-compatible: 
+      - IE=Edge
+      etag: 
+      - "\"a80ab67f6bc45a6616ac2e1acefb1962\""
+      content-type: 
+      - application/json; charset=utf-8
+      date: 
+      - Fri, 26 Aug 2011 16:56:49 GMT
+      x-runtime: 
+      - "0.719383"
+      cache-control: 
+      - max-age=0, private, must-revalidate
+      transfer-encoding: 
+      - chunked
+    body: "{\"unsubscribed_at\":null,\"single_access_token\":null,\"last_request_at\":null,\"hidden_at\":null,\"created_at\":\"2011-08-26T15:10:24Z\",\"agreement_acknowledged_at\":null,\"searchable\":true,\"crypted_password\":\"137f83afe432801506725ad37b759d97cc6d6fd5d65d36c43d0712ba66add082debd5ce7419da00e2eeba22b26854d7c5b31c3a147b43c3809472d576fcc3365\",\"updated_at\":\"2011-08-26T15:10:24Z\",\"secret_id\":null,\"perishable_token\":\"yF57shGW2Tr4cnXzJPwx\",\"agreement_initials\":null,\"id\":100,\"email_md5\":\"7618e7a4937b37640c24149bdf21cf27\",\"current_login_ip\":null,\"password_salt\":\"2kZyVgjF2pj_07wsLZYN\",\"email_invalid_at\":null,\"current_login_at\":null,\"primary_role_id\":1,\"phone\":null,\"persistence_token\":\"9320595eb051eee5edb2337463bcba8121bb5d2bb0e51ec8bc59b832bb1b5c2a8aaa151ecbc212fdd9e78f51bcd262589fce4832373f81d83482a3c7b99b8f4c\",\"login_count\":70,\"last_name\":\"Jordan\",\"last_login_ip\":null,\"last_login_at\":\"2011-08-26T15:10:24Z\",\"first_name\":\"Michael\",\"email\":\"candidate@recruitmilitary.com\",\"confirmed_at\":\"2011-08-24T15:10:24Z\"}"
+    http_version: "1.1"
