@@ -1,0 +1,30 @@
+--- 
+- !ruby/struct:VCR::HTTPInteraction 
+  request: !ruby/struct:VCR::Request 
+    method: :get
+    uri: http://localhost:3000/api/v1/candidates/100
+    body: user_credentials=Bdrc3t1LaiWtygbJ4jD6
+    headers: 
+      content-type: 
+      - application/x-www-form-urlencoded
+  response: !ruby/struct:VCR::Response 
+    status: !ruby/struct:VCR::ResponseStatus 
+      code: 200
+      message: OK
+    headers: 
+      x-ua-compatible: 
+      - IE=Edge
+      etag: 
+      - "\"e301f86b5d2a3d79afff2d4831deeb01\""
+      content-type: 
+      - application/json; charset=utf-8
+      date: 
+      - Fri, 26 Aug 2011 17:57:40 GMT
+      x-runtime: 
+      - "0.945387"
+      cache-control: 
+      - max-age=0, private, must-revalidate
+      transfer-encoding: 
+      - chunked
+    body: "{\"full_time\":false,\"city\":\"Santosberg\",\"resume_text\":\"resume\",\"location\":\"Santosberg, OH\",\"zip_code\":null,\"minimum_compensation\":110070,\"resume_filename\":\"resume.pdf\",\"seasonal\":false,\"part_time\":false,\"last_activity_at\":\"2011-08-26T15:10:24Z\",\"id\":100,\"willing_to_relocate\":false,\"work_interests\":[1005,1017,1025,1096],\"phone\":null,\"profile_url\":\"https://localhost/candidates/100\",\"resume_url\":\"http://localhost:3000/resumes/1\",\"internship\":false,\"last_name\":\"Jordan\",\"contract\":false,\"highest_education_level\":4,\"email\":\"candidate@recruitmilitary.com\",\"state\":\"OH\",\"first_name\":\"Michael\"}"
+    http_version: "1.1"

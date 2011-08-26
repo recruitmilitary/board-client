@@ -45,9 +45,14 @@ module Board
     end
 
     autoload :Users, 'board/client/users'
+    autoload :Candidates, 'board/client/candidates'
 
     def users
       Users.new(self)
+    end
+
+    def candidates
+      Candidates.new(self)
     end
 
   end
