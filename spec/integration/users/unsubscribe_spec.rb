@@ -21,7 +21,7 @@ describe 'User Unsubscribe' do
       it 'raises a not found error' do
         expect {
           board.users.unsubscribe("michael@jordan.com")
-        }.to raise_error(Board::Request::NotFound)
+        }.to raise_error(Board::Client::NotFound)
       end
     end
   end

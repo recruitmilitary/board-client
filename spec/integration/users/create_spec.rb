@@ -35,7 +35,7 @@ describe 'User Create' do
     it 'raises an error' do
       begin
         create_user
-      rescue Board::Request::Error => e
+      rescue Board::Client::Error => e
       end
 
       e.response.body.should =~ /is already taken/

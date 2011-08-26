@@ -3,18 +3,7 @@ require 'net/http'
 require 'net/https'
 
 module Board
-  module Request
-
-    class Error < StandardError
-      attr_reader :response
-
-      def initialize(response)
-        @response = response
-      end
-    end
-
-    NotFound = Class.new(Error)
-    Conflict = Class.new(Error)
+  module Client::Request
 
     def post(path, params)
       request path, params, :post
@@ -48,11 +37,11 @@ module Board
       if response.code =~ /2../
         Yajl::Parser.parse(response.body)
       elsif response.code == '404'
-        raise NotFound.new(response)
+        raise Client::NotFound.new(response)
       elsif response.code == '409'
-        raise Conflict.new(response)
+        raise Client::Conflict.new(response)
       else
-        raise Error.new(response)
+        raise Client::Error.new(response)
       end
     end
 

@@ -24,7 +24,7 @@ describe 'User Find' do
       it 'raises a not found exception' do
         expect {
           board.users.find(42)
-        }.to raise_error(Board::Request::NotFound)
+        }.to raise_error(Board::Client::NotFound)
       end
     end
   end
@@ -46,7 +46,7 @@ describe 'User Find' do
       it 'raises a not found exception' do
         expect {
           board.users.find(:email => 'michael@jordan.com')
-        }.to raise_error(Board::Request::NotFound)
+        }.to raise_error(Board::Client::NotFound)
       end
     end
   end
@@ -68,7 +68,7 @@ describe 'User Find' do
       it 'raises a not found exception' do
         expect {
           board.users.find(:email_md5 => '93e8d736de5088cb392465e024b69eef')
-        }.to raise_error(Board::Request::NotFound)
+        }.to raise_error(Board::Client::NotFound)
       end
     end
   end

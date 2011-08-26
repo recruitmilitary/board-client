@@ -22,7 +22,7 @@ describe 'Candidate Find' do
       it 'raises a not found exception' do
         expect {
           board.candidates.find(42)
-        }.to raise_error(Board::Request::NotFound)
+        }.to raise_error(Board::Client::NotFound)
       end
     end
   end

@@ -43,7 +43,7 @@ describe 'Candidate Invite' do
     it 'raises a conflict error' do
       expect {
         create_invitation(:email => "candidate@recruitmilitary.com")
-      }.to raise_error(Board::Request::Conflict)
+      }.to raise_error(Board::Client::Conflict)
     end
   end
 
