@@ -1,0 +1,30 @@
+--- 
+- !ruby/struct:VCR::HTTPInteraction 
+  request: !ruby/struct:VCR::Request 
+    method: :get
+    uri: http://localhost:3000/api/v1/users/unsubscribe
+    body: user_credentials=Bdrc3t1LaiWtygbJ4jD6&email=candidate%40recruitmilitary.com
+    headers: 
+      content-type: 
+      - application/x-www-form-urlencoded
+  response: !ruby/struct:VCR::Response 
+    status: !ruby/struct:VCR::ResponseStatus 
+      code: 200
+      message: OK
+    headers: 
+      x-ua-compatible: 
+      - IE=Edge
+      etag: 
+      - "\"ceb214eb5091ac2396f919cb52274434\""
+      content-type: 
+      - application/json; charset=utf-8
+      date: 
+      - Fri, 26 Aug 2011 17:50:20 GMT
+      x-runtime: 
+      - "1.045366"
+      cache-control: 
+      - max-age=0, private, must-revalidate
+      transfer-encoding: 
+      - chunked
+    body: "{\"unsubscribed_at\":\"2011-08-26T17:50:21Z\"}"
+    http_version: "1.1"

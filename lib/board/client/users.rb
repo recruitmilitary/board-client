@@ -17,5 +17,9 @@ module Board
       end
     end
 
+    def unsubscribe(email)
+      Hashie::Mash.new(@client.get("/users/unsubscribe", :email => email))
+    end
+
   end
 end
