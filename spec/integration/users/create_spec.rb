@@ -5,13 +5,14 @@ describe 'User Create' do
   let(:board) { Board::Client.new('Bdrc3t1LaiWtygbJ4jD6') }
 
   def create_user(attributes = {})
-    attributes = attributes.merge(
+    attributes = {
       :email           => "steve@apple.com",
       :first_name      => "Steve",
       :last_name       => "Jobs",
       :primary_role_id => 1,
       :password              => "password",
-      :password_confirmation => "password")
+      :password_confirmation => "password"
+    }.merge(attributes)
 
     board.users.create(attributes)
   end
