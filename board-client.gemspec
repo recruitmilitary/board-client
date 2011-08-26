@@ -8,7 +8,7 @@ Gem::Specification.new do |s|
   s.platform    = Gem::Platform::RUBY
   s.authors     = ["Michael Guterl"]
   s.email       = ["mguterl@gmail.com"]
-  s.homepage    = ""
+  s.homepage    = "http://github.com/recruitmilitary/board-client"
   s.summary     = %q{A ruby wrapper for the RecruitMilitary Board HTTP API}
   s.description = %q{A ruby wrapper for the RecruitMilitary Board HTTP API}
 
