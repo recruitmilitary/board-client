@@ -11,13 +11,13 @@ module Board
     include Request
 
     class << self
-      attr_accessor :default_url
+      attr_accessor :default_endpoint
     end
-    self.default_url = 'https://board.recruitmilitary.com/api/v1'
+    self.default_endpoint = 'https://board.recruitmilitary.com/api/v1'
 
-    def initialize(api_key, url = Client.default_url)
-      @api_key = api_key
-      @url     = url
+    def initialize(api_key, endpoint = Client.default_endpoint)
+      @api_key  = api_key
+      @endpoint = endpoint
     end
 
     def candidate_searches(params)

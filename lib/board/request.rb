@@ -27,7 +27,7 @@ module Board
     def request(path, params, method)
       params.merge!(:user_credentials => @api_key)
 
-      uri = URI.parse(@url + path)
+      uri = URI.parse(@endpoint + path)
       http = Net::HTTP.new(uri.host, uri.port)
 
       if uri.port == 443 # ssl?
