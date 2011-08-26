@@ -1,5 +1,6 @@
 require 'yajl'
 
+require 'board/client/version'
 require 'board/request'
 require 'board/candidate_search'
 
