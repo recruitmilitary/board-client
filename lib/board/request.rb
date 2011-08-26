@@ -13,8 +13,6 @@ module Board
       end
     end
 
-    private
-
     def post(path, params)
       request path, params, :post
     end

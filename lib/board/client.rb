@@ -1,4 +1,5 @@
 require 'yajl'
+require 'hashie/mash'
 
 require 'board/client/version'
 require 'board/request'
@@ -41,6 +42,12 @@ module Board
 
     def find_candidate(candidate_id)
       get "/candidates/#{candidate_id}", {}
+    end
+
+    autoload :Users, 'board/client/users'
+
+    def users
+      Users.new(self)
     end
 
   end
