@@ -9,5 +9,9 @@ module Board
       Hashie::Mash.new(@client.get("/candidates/#{id}"))
     end
 
+    def invite(attributes)
+      Hashie::Mash.new(@client.post("/candidate_invitations", attributes))
+    end
+
   end
 end

@@ -14,6 +14,7 @@ module Board
     end
 
     NotFound = Class.new(Error)
+    Conflict = Class.new(Error)
 
     def post(path, params)
       request path, params, :post
@@ -48,6 +49,8 @@ module Board
         Yajl::Parser.parse(response.body)
       elsif response.code == '404'
         raise NotFound.new(response)
+      elsif response.code == '409'
+        raise Conflict.new(response)
       else
         raise Error.new(response)
       end
