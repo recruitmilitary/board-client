@@ -1,0 +1,30 @@
+--- 
+- !ruby/struct:VCR::HTTPInteraction 
+  request: !ruby/struct:VCR::Request 
+    method: :post
+    uri: http://localhost:3000/api/v1/users
+    body: password_confirmation=password&user_credentials=Bdrc3t1LaiWtygbJ4jD6&first_name=Steve&email=steve%40apple.com&last_name=Jobs&primary_role_id=1&password=password
+    headers: 
+      content-type: 
+      - application/x-www-form-urlencoded
+  response: !ruby/struct:VCR::Response 
+    status: !ruby/struct:VCR::ResponseStatus 
+      code: 422
+      message: 
+    headers: 
+      x-ua-compatible: 
+      - IE=Edge
+      content-type: 
+      - application/json; charset=utf-8
+      date: 
+      - Fri, 26 Aug 2011 15:44:30 GMT
+      x-runtime: 
+      - "0.751983"
+      set-cookie: 
+      - _board_session=BAh7BiIPc2Vzc2lvbl9pZCIlNjMzYmYzN2I0YWE0NDlkYzNmYzRmOGExYzQ0YTQxNzk%3D--849718b9d1fcc3c96820a2f9717aed177e98895d; path=/; HttpOnly
+      cache-control: 
+      - no-cache
+      transfer-encoding: 
+      - chunked
+    body: "{\"errors\":{\"email\":[\"is already taken\"]}}"
+    http_version: "1.1"

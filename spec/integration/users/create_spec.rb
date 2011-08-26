@@ -43,4 +43,15 @@ describe 'User Create' do
     end
   end
 
+  context 'when missing required attributes' do
+    use_vcr_cassette "user missing attributes"
+
+    it 'raises an error' do
+      expect {
+        create_user(:email => nil)
+      }.to raise_error
+    end
+  end
+
+
 end
