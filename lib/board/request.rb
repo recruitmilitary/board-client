@@ -13,11 +13,13 @@ module Board
       end
     end
 
+    NotFound = Class.new(Error)
+
     def post(path, params)
       request path, params, :post
     end
 
-    def get(path, params)
+    def get(path, params = {})
       request path, params, :get
     end
 
@@ -44,6 +46,8 @@ module Board
 
       if response.code =~ /2../
         Yajl::Parser.parse(response.body)
+      elsif response.code == '404'
+        raise NotFound.new(response)
       else
         raise Error.new(response)
       end

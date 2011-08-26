@@ -2,8 +2,6 @@ require 'spec_helper'
 
 describe 'User Create' do
 
-  Board::Client.default_url = 'http://localhost:3000/api/v1'
-
   let(:board) { Board::Client.new('Bdrc3t1LaiWtygbJ4jD6') }
 
   def create_user(attributes = {})

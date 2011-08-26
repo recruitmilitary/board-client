@@ -9,5 +9,9 @@ module Board
       Hashie::Mash.new(@client.post("/users", attributes))
     end
 
+    def find(id)
+      Hashie::Mash.new(@client.get("/users/#{id}"))
+    end
+
   end
 end
