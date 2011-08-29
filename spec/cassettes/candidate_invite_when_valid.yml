@@ -3,7 +3,7 @@
   request: !ruby/struct:VCR::Request 
     method: :post
     uri: http://localhost:3000/api/v1/candidate_invitations
-    body: first_name=Maker%27s&email=makers%40mark.com&last_name=Mark&user_credentials=Bdrc3t1LaiWtygbJ4jD6
+    body: user_credentials=Bdrc3t1LaiWtygbJ4jD6&first_name=Maker%27s&last_name=Mark&email=makers%40mark.com
     headers: 
       content-type: 
       - application/x-www-form-urlencoded
@@ -15,18 +15,18 @@
       x-ua-compatible: 
       - IE=Edge
       etag: 
-      - "\"36065cc2e500c31015d54fccfe113f55\""
+      - "\"ead5c50abc611648b1c69f04301a249f\""
       content-type: 
       - application/json; charset=utf-8
       date: 
-      - Fri, 26 Aug 2011 18:14:09 GMT
+      - Mon, 29 Aug 2011 18:19:00 GMT
       x-runtime: 
-      - "0.694680"
+      - "0.778600"
       set-cookie: 
-      - _board_session=BAh7BiIPc2Vzc2lvbl9pZCIlZjFkZDYyMTU1NTM1MDY3OWU2YjQwOTlmMTUxZWE3OTU%3D--19b2a20767cf2d02fbea817c2cd3cb880e3fa91a; path=/; HttpOnly
+      - _board_session=BAh7BiIPc2Vzc2lvbl9pZCIlNTZlNzJhZjRlOWMzOTlmZWM1MGQ5MmUyYzgyMzAyZTE%3D--cb6f93274845e4a1fdd120ce6a0e873af598702a; path=/; HttpOnly
       cache-control: 
       - max-age=0, private, must-revalidate
       transfer-encoding: 
       - chunked
-    body: "{\"created_at\":\"2011-08-26T18:14:10Z\",\"accepted_by_id\":null,\"accepted_at\":null,\"updated_at\":\"2011-08-26T18:14:10Z\",\"secret_id\":\"44ab994eb5fd28df4790b24fcd1969ca\",\"id\":14,\"last_name\":\"Mark\",\"source\":null,\"organization_id\":null,\"first_name\":\"Maker's\",\"email\":\"makers@mark.com\"}"
+    body: "{\"created_at\":\"2011-08-29T18:19:01Z\",\"accepted_by_id\":null,\"accepted_at\":null,\"updated_at\":\"2011-08-29T18:19:01Z\",\"secret_id\":\"5143347268cdfca4222e899ef1ff0039\",\"id\":11,\"last_name\":\"Mark\",\"source\":null,\"organization_id\":null,\"first_name\":\"Maker's\",\"email\":\"makers@mark.com\"}"
     http_version: "1.1"

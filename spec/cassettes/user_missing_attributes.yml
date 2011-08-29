@@ -3,7 +3,7 @@
   request: !ruby/struct:VCR::Request 
     method: :post
     uri: http://localhost:3000/api/v1/users
-    body: password_confirmation=password&user_credentials=Bdrc3t1LaiWtygbJ4jD6&first_name=Steve&email=steve%40apple.com&last_name=Jobs&primary_role_id=1&password=password
+    body: user_credentials=Bdrc3t1LaiWtygbJ4jD6&first_name=Steve&last_name=Jobs&password=password&email=&primary_role_id=1&password_confirmation=password
     headers: 
       content-type: 
       - application/x-www-form-urlencoded
@@ -17,14 +17,14 @@
       content-type: 
       - application/json; charset=utf-8
       date: 
-      - Fri, 26 Aug 2011 15:44:30 GMT
+      - Mon, 29 Aug 2011 18:19:06 GMT
       x-runtime: 
-      - "0.751983"
+      - "0.440739"
       set-cookie: 
-      - _board_session=BAh7BiIPc2Vzc2lvbl9pZCIlNjMzYmYzN2I0YWE0NDlkYzNmYzRmOGExYzQ0YTQxNzk%3D--849718b9d1fcc3c96820a2f9717aed177e98895d; path=/; HttpOnly
+      - _board_session=BAh7BiIPc2Vzc2lvbl9pZCIlZGY0ZjVjMjY1ZWM2ZDI3YWRjZjcyNjIzMzc5MGU2MGM%3D--6907332cd363911c570608eb0c7a7c216db988d8; path=/; HttpOnly
       cache-control: 
       - no-cache
       transfer-encoding: 
       - chunked
-    body: "{\"errors\":{\"email\":[\"is already taken\"]}}"
+    body: "{\"errors\":{\"email\":[\"is too short (minimum is 6 characters)\",\"is invalid\",\"can't be blank\"]}}"
     http_version: "1.1"

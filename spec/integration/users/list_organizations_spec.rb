@@ -11,7 +11,7 @@ describe 'List User Organizations' do
       organizations.size.should == 2
       organization = organizations.first
 
-      organization.name.should == "Employer Organization"
+      organization.name.should == "Local Organization"
     end
   end
 

@@ -3,7 +3,7 @@
   request: !ruby/struct:VCR::Request 
     method: :post
     uri: http://localhost:3000/api/v1/users
-    body: password=password&password_confirmation=password&user_credentials=Bdrc3t1LaiWtygbJ4jD6&email=steve%40apple.com&first_name=Steve&last_name=Jobs&primary_role_id=1
+    body: user_credentials=Bdrc3t1LaiWtygbJ4jD6&first_name=Steve&last_name=Jobs&password=password&email=steve%40apple.com&primary_role_id=1&password_confirmation=password
     headers: 
       content-type: 
       - application/x-www-form-urlencoded
@@ -15,18 +15,18 @@
       x-ua-compatible: 
       - IE=Edge
       etag: 
-      - "\"2e6942322446630b2765c8e548b3d33c\""
+      - "\"d90a375dc790bfcc26340daffc9cb832\""
       content-type: 
       - application/json; charset=utf-8
       date: 
-      - Fri, 26 Aug 2011 15:18:04 GMT
+      - Mon, 29 Aug 2011 18:19:05 GMT
       x-runtime: 
-      - "0.727524"
+      - "0.792304"
       set-cookie: 
-      - _board_session=BAh7BiIPc2Vzc2lvbl9pZCIlMmQwYTFiNjU4MGNlNDg2MTFjNTg5MjNmNWYzMWIzNTY%3D--d41b51e05e9ccc2a13ba94ab9bf8c26d777843a4; path=/; HttpOnly
+      - _board_session=BAh7BiIPc2Vzc2lvbl9pZCIlMTVlYjk3OGE4NTMwYzFmZjBhNTRiMDBhYjI0MjkzNTI%3D--73a2699a5274a4e17bef99a56e0e773bc03e5df2; path=/; HttpOnly
       cache-control: 
       - max-age=0, private, must-revalidate
       transfer-encoding: 
       - chunked
-    body: "{\"unsubscribed_at\":null,\"single_access_token\":\"ynHUVMqvnCukaf0lIb-1\",\"last_request_at\":null,\"hidden_at\":null,\"created_at\":\"2011-08-26T15:18:04Z\",\"agreement_acknowledged_at\":null,\"searchable\":true,\"crypted_password\":\"2d009a8f7a7f4a76517310417e855f8b954ec1ba7d4c62d0f0f4fc8a205c8ca93ce7645e6fe6c3240eae036fa0bc85c357718c7a39782ce711665aba747283c2\",\"updated_at\":\"2011-08-26T15:18:04Z\",\"secret_id\":\"dd22c0684bf5f207c1d86075e1128700\",\"perishable_token\":\"7DSi5wEaujlcrIGQf-xq\",\"agreement_initials\":null,\"id\":201,\"email_md5\":\"dc8dd7b4026f67f9c2f46b170875305c\",\"current_login_ip\":null,\"password_salt\":\"GHWtS_qhk14gafv1pBCe\",\"email_invalid_at\":null,\"current_login_at\":null,\"primary_role_id\":1,\"phone\":null,\"persistence_token\":\"37139d454c06057af726c00979a520a39292a7d1a6c85ba846f0252635ff536f1e30a90e5f9bcaba8ef05fab08391c9f5c5dc047e92d2e4be61e4765c10ed168\",\"login_count\":0,\"last_name\":\"Jobs\",\"last_login_ip\":null,\"last_login_at\":null,\"first_name\":\"Steve\",\"email\":\"steve@apple.com\",\"confirmed_at\":null}"
+    body: "{\"unsubscribed_at\":null,\"single_access_token\":\"W5Hz9iwcBDNvzOVRJ8XF\",\"last_request_at\":null,\"hidden_at\":null,\"created_at\":\"2011-08-29T18:19:05Z\",\"agreement_acknowledged_at\":null,\"searchable\":true,\"crypted_password\":\"3681d621b84ed4dfa135e0ae51b819aae0a552a5c126a618d5ef011d1c8590ee388966921b286201e0af9a009201d92d9ca3de1a14d72d683a9471d7b73101b9\",\"updated_at\":\"2011-08-29T18:19:05Z\",\"secret_id\":\"f159979ea137288793d8d8585405805f\",\"perishable_token\":\"_3ELEEFSUYAnhe7erbec\",\"agreement_initials\":null,\"id\":201,\"email_md5\":\"dc8dd7b4026f67f9c2f46b170875305c\",\"current_login_ip\":null,\"password_salt\":\"f9BpAcFk2ovvKabocQfR\",\"email_invalid_at\":null,\"current_login_at\":null,\"primary_role_id\":1,\"phone\":null,\"persistence_token\":\"51e88ecfb666135511df91465255ace8c67783b486a306c55b18d906791550ccddfb040cff1dc1d79b8b20ab19d43f97cbaab8b44aff4f68ac0ba4bbf64d111f\",\"login_count\":0,\"last_name\":\"Jobs\",\"last_login_ip\":null,\"last_login_at\":null,\"first_name\":\"Steve\",\"email\":\"steve@apple.com\",\"confirmed_at\":null}"
     http_version: "1.1"

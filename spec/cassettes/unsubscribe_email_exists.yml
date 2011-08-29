@@ -15,16 +15,16 @@
       x-ua-compatible: 
       - IE=Edge
       etag: 
-      - "\"ceb214eb5091ac2396f919cb52274434\""
+      - "\"2e972f362c9c2d162721432730ecbd57\""
       content-type: 
       - application/json; charset=utf-8
       date: 
-      - Fri, 26 Aug 2011 17:50:20 GMT
+      - Mon, 29 Aug 2011 18:19:12 GMT
       x-runtime: 
-      - "1.045366"
+      - "0.769762"
       cache-control: 
       - max-age=0, private, must-revalidate
       transfer-encoding: 
       - chunked
-    body: "{\"unsubscribed_at\":\"2011-08-26T17:50:21Z\"}"
+    body: "{\"unsubscribed_at\":\"2011-08-29T18:19:12Z\"}"
     http_version: "1.1"

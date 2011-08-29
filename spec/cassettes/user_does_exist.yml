@@ -3,7 +3,7 @@
   request: !ruby/struct:VCR::Request 
     method: :post
     uri: http://localhost:3000/api/v1/users
-    body: password_confirmation=password&email=steve%40apple.com&first_name=Steve&last_name=Jobs&primary_role_id=1&user_credentials=Bdrc3t1LaiWtygbJ4jD6&password=password
+    body: user_credentials=Bdrc3t1LaiWtygbJ4jD6&first_name=Steve&last_name=Jobs&password=password&email=steve%40apple.com&primary_role_id=1&password_confirmation=password
     headers: 
       content-type: 
       - application/x-www-form-urlencoded
@@ -17,11 +17,11 @@
       content-type: 
       - application/json; charset=utf-8
       date: 
-      - Fri, 26 Aug 2011 15:32:12 GMT
+      - Mon, 29 Aug 2011 18:19:06 GMT
       x-runtime: 
-      - "0.728350"
+      - "0.785088"
       set-cookie: 
-      - _board_session=BAh7BiIPc2Vzc2lvbl9pZCIlNTMyMTdjNDFkZWRjNTFjOTRkNDUzMDY5MTI1OGEzZTE%3D--6e9230dcf5ce4a0af3369fef1a3f808625a39ef5; path=/; HttpOnly
+      - _board_session=BAh7BiIPc2Vzc2lvbl9pZCIlZDAzMzdmNTU5NzYyYzkzMzU1ZmI1NjFiYjkyM2EzNWM%3D--5533bb99278b3b1a6da79233bc06fff59340ac7e; path=/; HttpOnly
       cache-control: 
       - no-cache
       transfer-encoding: 

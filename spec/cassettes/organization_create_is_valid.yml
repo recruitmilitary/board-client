@@ -3,7 +3,7 @@
   request: !ruby/struct:VCR::Request 
     method: :post
     uri: http://localhost:3000/api/v1/organizations
-    body: description=%3ch1%3eNike%20Shoes%3c%2fh1%3e&website=http%3a%2f%2fnike.com&user_credentials=Bdrc3t1LaiWtygbJ4jD6&name=Nike
+    body: user_credentials=Bdrc3t1LaiWtygbJ4jD6&description=%3ch1%3eNike%20Shoes%3c%2fh1%3e&website=http%3a%2f%2fnike.com&name=Nike
     headers: 
       content-type: 
       - application/x-www-form-urlencoded
@@ -15,18 +15,18 @@
       x-ua-compatible: 
       - IE=Edge
       etag: 
-      - "\"f65040359f372bef01430f4a5dd57b5a\""
+      - "\"d22f305b3cd432e575d158fbe14b6af8\""
       content-type: 
       - application/json; charset=utf-8
       date: 
-      - Mon, 29 Aug 2011 12:15:08 GMT
+      - Mon, 29 Aug 2011 18:19:03 GMT
       x-runtime: 
-      - "0.306880"
+      - "0.502354"
       set-cookie: 
-      - _board_session=BAh7BiIPc2Vzc2lvbl9pZCIlZWI1MWI0MWY0OTg5YjJiY2Y4YjJhNWI2YzE4OTIyNGM%3D--88c6a3337ca80b438b3c569c81b6b401d53e00e2; path=/; HttpOnly
+      - _board_session=BAh7BiIPc2Vzc2lvbl9pZCIlMWIwMWQyOWFmZDY1MjhkMmRhZjdlZTgyZWI0YjM1ODA%3D--a53ef318443c2810c15bdabcf767e8e37fa0bf1b; path=/; HttpOnly
       cache-control: 
       - max-age=0, private, must-revalidate
       transfer-encoding: 
       - chunked
-    body: "{\"name\":\"Nike\",\"tracking_code\":null,\"created_at\":\"2011-08-29T12:15:09Z\",\"administrator_id\":null,\"updated_at\":\"2011-08-29T12:15:09Z\",\"logo\":{\"url\":null,\"medium\":{\"url\":null},\"large\":{\"url\":null},\"small\":{\"url\":null},\"mini\":{\"url\":null}},\"jobs_count\":0,\"id\":5,\"website\":\"http://nike.com\",\"employee_count_id\":null,\"description\":\"<h1>Nike Shoes</h1>\",\"cached_slug\":\"nike\",\"headquarters_id\":null}"
+    body: "{\"name\":\"Nike\",\"tracking_code\":null,\"created_at\":\"2011-08-29T18:19:04Z\",\"administrator_id\":null,\"updated_at\":\"2011-08-29T18:19:04Z\",\"logo\":{\"url\":null,\"medium\":{\"url\":null},\"large\":{\"url\":null},\"small\":{\"url\":null},\"mini\":{\"url\":null}},\"jobs_count\":0,\"id\":5,\"website\":\"http://nike.com\",\"employee_count_id\":null,\"description\":\"<h1>Nike Shoes</h1>\",\"cached_slug\":\"nike\",\"headquarters_id\":null}"
     http_version: "1.1"

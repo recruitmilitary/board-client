@@ -3,7 +3,7 @@
   request: !ruby/struct:VCR::Request 
     method: :post
     uri: http://localhost:3000/api/v1/candidate_invitations
-    body: first_name=Maker%27s&email=&last_name=Mark&user_credentials=Bdrc3t1LaiWtygbJ4jD6
+    body: user_credentials=Bdrc3t1LaiWtygbJ4jD6&first_name=Maker%27s&last_name=Mark&email=
     headers: 
       content-type: 
       - application/x-www-form-urlencoded
@@ -17,11 +17,11 @@
       content-type: 
       - text/html; charset=utf-8
       date: 
-      - Fri, 26 Aug 2011 18:14:10 GMT
+      - Mon, 29 Aug 2011 18:19:01 GMT
       x-runtime: 
-      - "0.670195"
+      - "0.394910"
       set-cookie: 
-      - _board_session=BAh7BiIPc2Vzc2lvbl9pZCIlYjI0YmFhNDM5N2JkMzlkMjZmNmI4YWI3ZDliMGJjZWM%3D--3fa73508dd914170405e93634c6f1edf6b843b16; path=/; HttpOnly
+      - _board_session=BAh7BiIPc2Vzc2lvbl9pZCIlNTA0MDNhNmNkZGFkMDAyZDA0Zjc1ZjlmYWM5ZTFjYWM%3D--7f395c9000ff871608a9556314dcac556fe808af; path=/; HttpOnly
       cache-control: 
       - no-cache
       transfer-encoding: 

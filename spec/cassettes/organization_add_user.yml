@@ -15,11 +15,11 @@
       x-ua-compatible: 
       - IE=Edge
       date: 
-      - Mon, 29 Aug 2011 13:30:21 GMT
+      - Mon, 29 Aug 2011 18:19:02 GMT
       x-runtime: 
-      - "0.499172"
+      - "0.397484"
       set-cookie: 
-      - _board_session=BAh7BiIPc2Vzc2lvbl9pZCIlZDUzZWM3YzRjMzQ4ZGJmYTRmNTJlMDYwMjYzNWNmYWU%3D--17ca1017cfaea4c0e8b993d2dda02ea9ddfa458a; path=/; HttpOnly
+      - _board_session=BAh7BiIPc2Vzc2lvbl9pZCIlMjdkZWRiOTYwZDliYTA4NjYxYjNkOTk5MjFkOTkzMDk%3D--74874cff7b679857563228236ae435443d48706b; path=/; HttpOnly
       cache-control: 
       - no-cache
     body: 

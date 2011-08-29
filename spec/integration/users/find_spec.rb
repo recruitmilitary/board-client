@@ -7,12 +7,12 @@ describe 'User Find' do
       use_vcr_cassette 'user exists with id'
 
       it 'returns a user with the correct attributes' do
-        user = board.users.find(100)
+        user = board.users.find(1)
 
-        user.id.should == 100
-        user.email.should == 'candidate@recruitmilitary.com'
-        user.first_name.should == 'Michael'
-        user.last_name.should == 'Jordan'
+        user.id.should == 1
+        user.email.should == 'staff@recruitmilitary.com'
+        user.first_name.should == 'Staff'
+        user.last_name.should == 'McStafforson'
       end
     end
 
@@ -54,9 +54,9 @@ describe 'User Find' do
       use_vcr_cassette 'user exists with email md5'
 
       it 'returns a user with the correct attributes' do
-        user = board.users.find(:email_md5 => '7618e7a4937b37640c24149bdf21cf27')
+        user = board.users.find(:email_md5 => '3e67fa7c8045d085e66a51deee26cbc4')
 
-        user.email.should == 'candidate@recruitmilitary.com'
+        user.email.should == 'staff@recruitmilitary.com'
       end
     end
 
