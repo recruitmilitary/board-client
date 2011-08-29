@@ -1,0 +1,26 @@
+--- 
+- !ruby/struct:VCR::HTTPInteraction 
+  request: !ruby/struct:VCR::Request 
+    method: :post
+    uri: http://localhost:3000/api/v1/users/1/organizations
+    body: user_credentials=Bdrc3t1LaiWtygbJ4jD6&id=3
+    headers: 
+      content-type: 
+      - application/x-www-form-urlencoded
+  response: !ruby/struct:VCR::Response 
+    status: !ruby/struct:VCR::ResponseStatus 
+      code: 204
+      message: No Content
+    headers: 
+      x-ua-compatible: 
+      - IE=Edge
+      date: 
+      - Mon, 29 Aug 2011 13:30:21 GMT
+      x-runtime: 
+      - "0.499172"
+      set-cookie: 
+      - _board_session=BAh7BiIPc2Vzc2lvbl9pZCIlZDUzZWM3YzRjMzQ4ZGJmYTRmNTJlMDYwMjYzNWNmYWU%3D--17ca1017cfaea4c0e8b993d2dda02ea9ddfa458a; path=/; HttpOnly
+      cache-control: 
+      - no-cache
+    body: 
+    http_version: "1.1"

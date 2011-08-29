@@ -35,7 +35,11 @@ module Board
       response = http.request(request)
 
       if response.code =~ /2../
-        Yajl::Parser.parse(response.body)
+        if response.code == 204
+          true
+        else
+          Yajl::Parser.parse(response.body)
+        end
       elsif response.code == '404'
         raise Client::NotFound.new(response)
       elsif response.code == '409'
