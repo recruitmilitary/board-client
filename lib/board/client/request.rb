@@ -34,15 +34,16 @@ module Board
       request.set_form_data(params)
       response = http.request(request)
 
-      if response.code =~ /2../
+      case response.code
+      when /2../
         if response.code == '204'
           true
         else
           Yajl::Parser.parse(response.body)
         end
-      elsif response.code == '404'
+      when '404'
         raise Client::NotFound.new(response)
-      elsif response.code == '409'
+      when '409'
         raise Client::Conflict.new(response)
       else
         raise Client::Error.new(response)
