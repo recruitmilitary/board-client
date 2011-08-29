@@ -6,7 +6,13 @@ module Board
     end
 
     def post(path, attributes = {})
-      Hashie::Mash.new(@client.post(path, attributes))
+      json = @client.post(path, attributes)
+
+      if json.is_a?(Hash)
+        Hashie::Mash.new(json)
+      else
+        json
+      end
     end
 
     def get(path, attributes = {})

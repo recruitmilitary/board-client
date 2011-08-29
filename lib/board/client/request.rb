@@ -35,7 +35,7 @@ module Board
       response = http.request(request)
 
       if response.code =~ /2../
-        if response.code == 204
+        if response.code == '204'
           true
         else
           Yajl::Parser.parse(response.body)
