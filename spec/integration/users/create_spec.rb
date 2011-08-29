@@ -2,8 +2,6 @@ require 'spec_helper'
 
 describe 'User Create' do
 
-  let(:board) { Board::Client.new('Bdrc3t1LaiWtygbJ4jD6') }
-
   def create_user(attributes = {})
     attributes = {
       :email           => "steve@apple.com",

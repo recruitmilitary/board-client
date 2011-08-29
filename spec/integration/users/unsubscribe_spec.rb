@@ -2,8 +2,6 @@ require 'spec_helper'
 
 describe 'User Unsubscribe' do
 
-  let(:board) { Board::Client.new('Bdrc3t1LaiWtygbJ4jD6') }
-
   context 'by email' do
     context 'when the user exists' do
       use_vcr_cassette 'unsubscribe email exists'

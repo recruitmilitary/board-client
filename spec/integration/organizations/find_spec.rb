@@ -2,8 +2,6 @@ require 'spec_helper'
 
 describe 'Organization Find' do
 
-  let(:board) { Board::Client.new('Bdrc3t1LaiWtygbJ4jD6') }
-
   context 'by id' do
     context 'when the organization exists' do
       use_vcr_cassette 'organization exists with id'

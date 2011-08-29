@@ -2,8 +2,6 @@ require 'spec_helper'
 
 describe 'Candidate Invite' do
 
-  let(:board) { Board::Client.new('Bdrc3t1LaiWtygbJ4jD6') }
-
   def create_invitation(attributes = {})
     attributes = {
       :email      => "makers@mark.com",

@@ -2,8 +2,6 @@ require 'spec_helper'
 
 describe 'Candidate Find' do
 
-  let(:board) { Board::Client.new('Bdrc3t1LaiWtygbJ4jD6') }
-
   context 'by id' do
     context 'when the candidate exists' do
       use_vcr_cassette 'candidate exists with id'

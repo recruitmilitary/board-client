@@ -2,8 +2,6 @@ require 'spec_helper'
 
 describe 'Organization Add User' do
 
-  let(:board) { Board::Client.new('Bdrc3t1LaiWtygbJ4jD6') }
-
   context 'when the user and organization exist' do
     use_vcr_cassette "organization add user"
 

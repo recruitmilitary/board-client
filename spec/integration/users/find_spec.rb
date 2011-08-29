@@ -2,8 +2,6 @@ require 'spec_helper'
 
 describe 'User Find' do
 
-  let(:board) { Board::Client.new('Bdrc3t1LaiWtygbJ4jD6') }
-
   context 'by id' do
     context 'when the user exists' do
       use_vcr_cassette 'user exists with id'

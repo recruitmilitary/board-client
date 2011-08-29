@@ -2,8 +2,6 @@ require 'spec_helper'
 
 describe 'Organization Create' do
 
-  let(:board) { Board::Client.new('Bdrc3t1LaiWtygbJ4jD6') }
-
   def create_organization(attributes = {})
     attributes = {
       :name        => "Nike",

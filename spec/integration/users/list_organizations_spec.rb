@@ -2,8 +2,6 @@ require 'spec_helper'
 
 describe 'List User Organizations' do
 
-  let(:board) { Board::Client.new('Bdrc3t1LaiWtygbJ4jD6') }
-
   context 'with a valid user id' do
     use_vcr_cassette "list user organizations with valid id"
 
