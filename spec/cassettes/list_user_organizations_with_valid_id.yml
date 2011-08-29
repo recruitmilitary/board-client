@@ -1,0 +1,30 @@
+--- 
+- !ruby/struct:VCR::HTTPInteraction 
+  request: !ruby/struct:VCR::Request 
+    method: :get
+    uri: http://localhost:3000/api/v1/users/1/organizations
+    body: user_credentials=Bdrc3t1LaiWtygbJ4jD6
+    headers: 
+      content-type: 
+      - application/x-www-form-urlencoded
+  response: !ruby/struct:VCR::Response 
+    status: !ruby/struct:VCR::ResponseStatus 
+      code: 200
+      message: OK
+    headers: 
+      x-ua-compatible: 
+      - IE=Edge
+      etag: 
+      - "\"5358a8b9919f521ae8671c33b973b6ae\""
+      content-type: 
+      - application/json; charset=utf-8
+      date: 
+      - Mon, 29 Aug 2011 13:07:46 GMT
+      x-runtime: 
+      - "0.456878"
+      cache-control: 
+      - max-age=0, private, must-revalidate
+      transfer-encoding: 
+      - chunked
+    body: "[{\"name\":\"Employer Organization\",\"tracking_code\":null,\"created_at\":\"2011-08-26T15:10:23Z\",\"administrator_id\":null,\"updated_at\":\"2011-08-26T15:10:23Z\",\"logo\":{\"url\":null,\"medium\":{\"url\":null},\"large\":{\"url\":null},\"small\":{\"url\":null},\"mini\":{\"url\":null}},\"jobs_count\":10,\"id\":2,\"website\":\"http://www.recruitmilitary.com\",\"employee_count_id\":null,\"description\":null,\"cached_slug\":\"employer-organization\",\"headquarters_id\":null},{\"name\":\"RecruitMilitary\",\"tracking_code\":null,\"created_at\":\"2011-08-26T15:10:22Z\",\"administrator_id\":null,\"updated_at\":\"2011-08-26T15:10:22Z\",\"logo\":{\"url\":null,\"medium\":{\"url\":null},\"large\":{\"url\":null},\"small\":{\"url\":null},\"mini\":{\"url\":null}},\"jobs_count\":0,\"id\":1,\"website\":\"http://www.recruitmilitary.com\",\"employee_count_id\":null,\"description\":null,\"cached_slug\":\"recruitmilitary\",\"headquarters_id\":null}]"
+    http_version: "1.1"

@@ -1,0 +1,346 @@
+--- 
+- !ruby/struct:VCR::HTTPInteraction 
+  request: !ruby/struct:VCR::Request 
+    method: :get
+    uri: http://localhost:3000/api/v1/users/1000000/organizations
+    body: user_credentials=Bdrc3t1LaiWtygbJ4jD6
+    headers: 
+      content-type: 
+      - application/x-www-form-urlencoded
+  response: !ruby/struct:VCR::Response 
+    status: !ruby/struct:VCR::ResponseStatus 
+      code: 404
+      message: Not Found
+    headers: 
+      content-type: 
+      - text/html
+      date: 
+      - Mon, 29 Aug 2011 13:10:37 GMT
+      x-runtime: 
+      - "0.577129"
+      content-length: 
+      - "49405"
+    body: |
+      <html xmlns="http://www.w3.org/1999/xhtml">
+      <head>
+        <title>Action Controller: Exception caught</title>
+        <style>
+          body { background-color: #fff; color: #333; }
+      
+          body, p, ol, ul, td {
+            font-family: verdana, arial, helvetica, sans-serif;
+            font-size:   13px;
+            line-height: 18px;
+          }
+      
+          pre {
+            background-color: #eee;
+            padding: 10px;
+            font-size: 11px;
+          }
+      
+          a { color: #000; }
+          a:visited { color: #666; }
+          a:hover { color: #fff; background-color:#000; }
+        </style>
+      </head>
+      <body>
+      
+      <h1>
+        ActiveRecord::RecordNotFound
+          in Api::V1::UserOrganizationsController#index
+      </h1>
+      <pre>Couldn't find User with ID=1000000</pre>
+      
+      
+      <p><code>Rails.root: /Users/michaelguterl/code/rm/board</code></p>
+      
+      <div id="traces">
+          <a href="#" onclick="document.getElementById('Framework-Trace').style.display='none';document.getElementById('Full-Trace').style.display='none';document.getElementById('Application-Trace').style.display='block';; return false;">Application Trace</a> |
+          <a href="#" onclick="document.getElementById('Application-Trace').style.display='none';document.getElementById('Full-Trace').style.display='none';document.getElementById('Framework-Trace').style.display='block';; return false;">Framework Trace</a> |
+          <a href="#" onclick="document.getElementById('Application-Trace').style.display='none';document.getElementById('Framework-Trace').style.display='none';document.getElementById('Full-Trace').style.display='block';; return false;">Full Trace</a> 
+      
+          <div id="Application-Trace" style="display: block;">
+            <pre><code>app/controllers/api/v1/user_organizations_controller.rb:5:in `index'</code></pre>
+          </div>
+          <div id="Framework-Trace" style="display: none;">
+            <pre><code>activerecord (3.0.9) lib/active_record/relation/finder_methods.rb:304:in `find_one'
+      friendly_id (3.2.1) lib/friendly_id/active_record_adapter/relation.rb:148:in `find_one'
+      activerecord (3.0.9) lib/active_record/relation/finder_methods.rb:289:in `find_with_ids'
+      activerecord (3.0.9) lib/active_record/relation/finder_methods.rb:107:in `find'
+      activerecord (3.0.9) lib/active_record/base.rb:444:in `__send__'
+      activerecord (3.0.9) lib/active_record/base.rb:444:in `find'
+      actionpack (3.0.9) lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+      actionpack (3.0.9) lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+      actionpack (3.0.9) lib/abstract_controller/base.rb:150:in `process_action'
+      actionpack (3.0.9) lib/action_controller/metal/rendering.rb:11:in `process_action'
+      actionpack (3.0.9) lib/abstract_controller/callbacks.rb:18:in `process_action'
+      activesupport (3.0.9) lib/active_support/callbacks.rb:461:in `_run__824794471__process_action__199225275__callbacks'
+      activesupport (3.0.9) lib/active_support/callbacks.rb:410:in `send'
+      activesupport (3.0.9) lib/active_support/callbacks.rb:410:in `_run_process_action_callbacks'
+      activesupport (3.0.9) lib/active_support/callbacks.rb:94:in `send'
+      activesupport (3.0.9) lib/active_support/callbacks.rb:94:in `run_callbacks'
+      actionpack (3.0.9) lib/abstract_controller/callbacks.rb:17:in `process_action'
+      actionpack (3.0.9) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+      activesupport (3.0.9) lib/active_support/notifications.rb:52:in `instrument'
+      activesupport (3.0.9) lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+      activesupport (3.0.9) lib/active_support/notifications.rb:52:in `instrument'
+      actionpack (3.0.9) lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+      actionpack (3.0.9) lib/action_controller/metal/rescue.rb:17:in `process_action'
+      newrelic_rpm (3.0.1) lib/new_relic/agent/instrumentation/rails3/action_controller.rb:34:in `process_action'
+      newrelic_rpm (3.0.1) lib/new_relic/agent/instrumentation/controller_instrumentation.rb:253:in `perform_action_with_newrelic_trace'
+      newrelic_rpm (3.0.1) lib/new_relic/agent/method_tracer.rb:193:in `trace_execution_scoped'
+      newrelic_rpm (3.0.1) lib/new_relic/agent/instrumentation/controller_instrumentation.rb:248:in `perform_action_with_newrelic_trace'
+      newrelic_rpm (3.0.1) lib/new_relic/agent/instrumentation/rails3/action_controller.rb:33:in `process_action'
+      actionpack (3.0.9) lib/abstract_controller/base.rb:119:in `process'
+      actionpack (3.0.9) lib/abstract_controller/rendering.rb:41:in `process'
+      actionpack (3.0.9) lib/action_controller/metal.rb:138:in `dispatch'
+      actionpack (3.0.9) lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+      actionpack (3.0.9) lib/action_controller/metal.rb:178:in `action'
+      actionpack (3.0.9) lib/action_dispatch/routing/route_set.rb:62:in `call'
+      actionpack (3.0.9) lib/action_dispatch/routing/route_set.rb:62:in `dispatch'
+      actionpack (3.0.9) lib/action_dispatch/routing/route_set.rb:27:in `call'
+      rack-mount (0.6.14) lib/rack/mount/route_set.rb:148:in `call'
+      rack-mount (0.6.14) lib/rack/mount/code_generation.rb:93:in `recognize'
+      rack-mount (0.6.14) lib/rack/mount/code_generation.rb:89:in `optimized_each'
+      rack-mount (0.6.14) lib/rack/mount/code_generation.rb:92:in `recognize'
+      rack-mount (0.6.14) lib/rack/mount/route_set.rb:139:in `call'
+      actionpack (3.0.9) lib/action_dispatch/routing/route_set.rb:493:in `call'
+      /Users/michaelguterl/.rvm/gems/ree-1.8.7-2011.03@rm-board/bundler/gems/oauth2-provider-465353dcca4f/lib/oauth2/provider/rack/middleware.rb:14:in `call'
+      /Users/michaelguterl/.rvm/gems/ree-1.8.7-2011.03@rm-board/bundler/gems/oauth2-provider-465353dcca4f/lib/oauth2/provider/rack/middleware.rb:10:in `catch'
+      /Users/michaelguterl/.rvm/gems/ree-1.8.7-2011.03@rm-board/bundler/gems/oauth2-provider-465353dcca4f/lib/oauth2/provider/rack/middleware.rb:10:in `call'
+      newrelic_rpm (3.0.1) lib/new_relic/rack/browser_monitoring.rb:18:in `call'
+      newrelic_rpm (3.0.1) lib/new_relic/rack/developer_mode.rb:24:in `call'
+      hoptoad_notifier (2.4.11) lib/hoptoad_notifier/rack.rb:27:in `call'
+      haml (3.0.25) lib/sass/plugin/rack.rb:41:in `call'
+      actionpack (3.0.9) lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+      actionpack (3.0.9) lib/action_dispatch/middleware/head.rb:14:in `call'
+      rack (1.2.3) lib/rack/methodoverride.rb:24:in `call'
+      actionpack (3.0.9) lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+      actionpack (3.0.9) lib/action_dispatch/middleware/flash.rb:182:in `call'
+      actionpack (3.0.9) lib/action_dispatch/middleware/session/abstract_store.rb:149:in `call'
+      actionpack (3.0.9) lib/action_dispatch/middleware/cookies.rb:302:in `call'
+      activerecord (3.0.9) lib/active_record/query_cache.rb:32:in `call'
+      activerecord (3.0.9) lib/active_record/connection_adapters/abstract/query_cache.rb:28:in `cache'
+      activerecord (3.0.9) lib/active_record/query_cache.rb:12:in `cache'
+      activerecord (3.0.9) lib/active_record/query_cache.rb:31:in `call'
+      activerecord (3.0.9) lib/active_record/connection_adapters/abstract/connection_pool.rb:354:in `call'
+      actionpack (3.0.9) lib/action_dispatch/middleware/callbacks.rb:46:in `call'
+      activesupport (3.0.9) lib/active_support/callbacks.rb:416:in `_run_call_callbacks'
+      actionpack (3.0.9) lib/action_dispatch/middleware/callbacks.rb:44:in `call'
+      rack (1.2.3) lib/rack/sendfile.rb:107:in `call'
+      actionpack (3.0.9) lib/action_dispatch/middleware/remote_ip.rb:48:in `call'
+      actionpack (3.0.9) lib/action_dispatch/middleware/show_exceptions.rb:47:in `call'
+      railties (3.0.9) lib/rails/rack/logger.rb:13:in `call'
+      rack (1.2.3) lib/rack/runtime.rb:17:in `call'
+      activesupport (3.0.9) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+      rack (1.2.3) lib/rack/lock.rb:11:in `call'
+      rack (1.2.3) lib/rack/lock.rb:11:in `synchronize'
+      rack (1.2.3) lib/rack/lock.rb:11:in `call'
+      actionpack (3.0.9) lib/action_dispatch/middleware/static.rb:30:in `call'
+      hoptoad_notifier (2.4.11) lib/hoptoad_notifier/user_informer.rb:12:in `call'
+      railties (3.0.9) lib/rails/application.rb:168:in `call'
+      railties (3.0.9) lib/rails/application.rb:77:in `send'
+      railties (3.0.9) lib/rails/application.rb:77:in `method_missing'
+      rack (1.2.3) lib/rack/urlmap.rb:47:in `call'
+      rack (1.2.3) lib/rack/urlmap.rb:41:in `each'
+      rack (1.2.3) lib/rack/urlmap.rb:41:in `call'
+      railties (3.0.9) lib/rails/rack/log_tailer.rb:14:in `call'
+      rack (1.2.3) lib/rack/content_length.rb:13:in `call'
+      rack (1.2.3) lib/rack/chunked.rb:15:in `call'
+      rack (1.2.3) lib/rack/handler/mongrel.rb:67:in `process'
+      mongrel (1.1.5) lib/mongrel.rb:159:in `process_client'
+      mongrel (1.1.5) lib/mongrel.rb:158:in `each'
+      mongrel (1.1.5) lib/mongrel.rb:158:in `process_client'
+      mongrel (1.1.5) lib/mongrel.rb:285:in `run'
+      mongrel (1.1.5) lib/mongrel.rb:285:in `initialize'
+      mongrel (1.1.5) lib/mongrel.rb:285:in `new'
+      mongrel (1.1.5) lib/mongrel.rb:285:in `run'
+      mongrel (1.1.5) lib/mongrel.rb:268:in `initialize'
+      mongrel (1.1.5) lib/mongrel.rb:268:in `new'
+      mongrel (1.1.5) lib/mongrel.rb:268:in `run'
+      rack (1.2.3) lib/rack/handler/mongrel.rb:38:in `run'
+      rack (1.2.3) lib/rack/server.rb:217:in `start'
+      railties (3.0.9) lib/rails/commands/server.rb:65:in `start'
+      railties (3.0.9) lib/rails/commands.rb:30
+      railties (3.0.9) lib/rails/commands.rb:27:in `tap'
+      railties (3.0.9) lib/rails/commands.rb:27
+      script/rails:6:in `require'
+      script/rails:6</code></pre>
+          </div>
+          <div id="Full-Trace" style="display: none;">
+            <pre><code>activerecord (3.0.9) lib/active_record/relation/finder_methods.rb:304:in `find_one'
+      friendly_id (3.2.1) lib/friendly_id/active_record_adapter/relation.rb:148:in `find_one'
+      activerecord (3.0.9) lib/active_record/relation/finder_methods.rb:289:in `find_with_ids'
+      activerecord (3.0.9) lib/active_record/relation/finder_methods.rb:107:in `find'
+      activerecord (3.0.9) lib/active_record/base.rb:444:in `__send__'
+      activerecord (3.0.9) lib/active_record/base.rb:444:in `find'
+      app/controllers/api/v1/user_organizations_controller.rb:5:in `index'
+      actionpack (3.0.9) lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+      actionpack (3.0.9) lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+      actionpack (3.0.9) lib/abstract_controller/base.rb:150:in `process_action'
+      actionpack (3.0.9) lib/action_controller/metal/rendering.rb:11:in `process_action'
+      actionpack (3.0.9) lib/abstract_controller/callbacks.rb:18:in `process_action'
+      activesupport (3.0.9) lib/active_support/callbacks.rb:461:in `_run__824794471__process_action__199225275__callbacks'
+      activesupport (3.0.9) lib/active_support/callbacks.rb:410:in `send'
+      activesupport (3.0.9) lib/active_support/callbacks.rb:410:in `_run_process_action_callbacks'
+      activesupport (3.0.9) lib/active_support/callbacks.rb:94:in `send'
+      activesupport (3.0.9) lib/active_support/callbacks.rb:94:in `run_callbacks'
+      actionpack (3.0.9) lib/abstract_controller/callbacks.rb:17:in `process_action'
+      actionpack (3.0.9) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+      activesupport (3.0.9) lib/active_support/notifications.rb:52:in `instrument'
+      activesupport (3.0.9) lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+      activesupport (3.0.9) lib/active_support/notifications.rb:52:in `instrument'
+      actionpack (3.0.9) lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+      actionpack (3.0.9) lib/action_controller/metal/rescue.rb:17:in `process_action'
+      newrelic_rpm (3.0.1) lib/new_relic/agent/instrumentation/rails3/action_controller.rb:34:in `process_action'
+      newrelic_rpm (3.0.1) lib/new_relic/agent/instrumentation/controller_instrumentation.rb:253:in `perform_action_with_newrelic_trace'
+      newrelic_rpm (3.0.1) lib/new_relic/agent/method_tracer.rb:193:in `trace_execution_scoped'
+      newrelic_rpm (3.0.1) lib/new_relic/agent/instrumentation/controller_instrumentation.rb:248:in `perform_action_with_newrelic_trace'
+      newrelic_rpm (3.0.1) lib/new_relic/agent/instrumentation/rails3/action_controller.rb:33:in `process_action'
+      actionpack (3.0.9) lib/abstract_controller/base.rb:119:in `process'
+      actionpack (3.0.9) lib/abstract_controller/rendering.rb:41:in `process'
+      actionpack (3.0.9) lib/action_controller/metal.rb:138:in `dispatch'
+      actionpack (3.0.9) lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+      actionpack (3.0.9) lib/action_controller/metal.rb:178:in `action'
+      actionpack (3.0.9) lib/action_dispatch/routing/route_set.rb:62:in `call'
+      actionpack (3.0.9) lib/action_dispatch/routing/route_set.rb:62:in `dispatch'
+      actionpack (3.0.9) lib/action_dispatch/routing/route_set.rb:27:in `call'
+      rack-mount (0.6.14) lib/rack/mount/route_set.rb:148:in `call'
+      rack-mount (0.6.14) lib/rack/mount/code_generation.rb:93:in `recognize'
+      rack-mount (0.6.14) lib/rack/mount/code_generation.rb:89:in `optimized_each'
+      rack-mount (0.6.14) lib/rack/mount/code_generation.rb:92:in `recognize'
+      rack-mount (0.6.14) lib/rack/mount/route_set.rb:139:in `call'
+      actionpack (3.0.9) lib/action_dispatch/routing/route_set.rb:493:in `call'
+      /Users/michaelguterl/.rvm/gems/ree-1.8.7-2011.03@rm-board/bundler/gems/oauth2-provider-465353dcca4f/lib/oauth2/provider/rack/middleware.rb:14:in `call'
+      /Users/michaelguterl/.rvm/gems/ree-1.8.7-2011.03@rm-board/bundler/gems/oauth2-provider-465353dcca4f/lib/oauth2/provider/rack/middleware.rb:10:in `catch'
+      /Users/michaelguterl/.rvm/gems/ree-1.8.7-2011.03@rm-board/bundler/gems/oauth2-provider-465353dcca4f/lib/oauth2/provider/rack/middleware.rb:10:in `call'
+      newrelic_rpm (3.0.1) lib/new_relic/rack/browser_monitoring.rb:18:in `call'
+      newrelic_rpm (3.0.1) lib/new_relic/rack/developer_mode.rb:24:in `call'
+      hoptoad_notifier (2.4.11) lib/hoptoad_notifier/rack.rb:27:in `call'
+      haml (3.0.25) lib/sass/plugin/rack.rb:41:in `call'
+      actionpack (3.0.9) lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+      actionpack (3.0.9) lib/action_dispatch/middleware/head.rb:14:in `call'
+      rack (1.2.3) lib/rack/methodoverride.rb:24:in `call'
+      actionpack (3.0.9) lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+      actionpack (3.0.9) lib/action_dispatch/middleware/flash.rb:182:in `call'
+      actionpack (3.0.9) lib/action_dispatch/middleware/session/abstract_store.rb:149:in `call'
+      actionpack (3.0.9) lib/action_dispatch/middleware/cookies.rb:302:in `call'
+      activerecord (3.0.9) lib/active_record/query_cache.rb:32:in `call'
+      activerecord (3.0.9) lib/active_record/connection_adapters/abstract/query_cache.rb:28:in `cache'
+      activerecord (3.0.9) lib/active_record/query_cache.rb:12:in `cache'
+      activerecord (3.0.9) lib/active_record/query_cache.rb:31:in `call'
+      activerecord (3.0.9) lib/active_record/connection_adapters/abstract/connection_pool.rb:354:in `call'
+      actionpack (3.0.9) lib/action_dispatch/middleware/callbacks.rb:46:in `call'
+      activesupport (3.0.9) lib/active_support/callbacks.rb:416:in `_run_call_callbacks'
+      actionpack (3.0.9) lib/action_dispatch/middleware/callbacks.rb:44:in `call'
+      rack (1.2.3) lib/rack/sendfile.rb:107:in `call'
+      actionpack (3.0.9) lib/action_dispatch/middleware/remote_ip.rb:48:in `call'
+      actionpack (3.0.9) lib/action_dispatch/middleware/show_exceptions.rb:47:in `call'
+      railties (3.0.9) lib/rails/rack/logger.rb:13:in `call'
+      rack (1.2.3) lib/rack/runtime.rb:17:in `call'
+      activesupport (3.0.9) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+      rack (1.2.3) lib/rack/lock.rb:11:in `call'
+      rack (1.2.3) lib/rack/lock.rb:11:in `synchronize'
+      rack (1.2.3) lib/rack/lock.rb:11:in `call'
+      actionpack (3.0.9) lib/action_dispatch/middleware/static.rb:30:in `call'
+      hoptoad_notifier (2.4.11) lib/hoptoad_notifier/user_informer.rb:12:in `call'
+      railties (3.0.9) lib/rails/application.rb:168:in `call'
+      railties (3.0.9) lib/rails/application.rb:77:in `send'
+      railties (3.0.9) lib/rails/application.rb:77:in `method_missing'
+      rack (1.2.3) lib/rack/urlmap.rb:47:in `call'
+      rack (1.2.3) lib/rack/urlmap.rb:41:in `each'
+      rack (1.2.3) lib/rack/urlmap.rb:41:in `call'
+      railties (3.0.9) lib/rails/rack/log_tailer.rb:14:in `call'
+      rack (1.2.3) lib/rack/content_length.rb:13:in `call'
+      rack (1.2.3) lib/rack/chunked.rb:15:in `call'
+      rack (1.2.3) lib/rack/handler/mongrel.rb:67:in `process'
+      mongrel (1.1.5) lib/mongrel.rb:159:in `process_client'
+      mongrel (1.1.5) lib/mongrel.rb:158:in `each'
+      mongrel (1.1.5) lib/mongrel.rb:158:in `process_client'
+      mongrel (1.1.5) lib/mongrel.rb:285:in `run'
+      mongrel (1.1.5) lib/mongrel.rb:285:in `initialize'
+      mongrel (1.1.5) lib/mongrel.rb:285:in `new'
+      mongrel (1.1.5) lib/mongrel.rb:285:in `run'
+      mongrel (1.1.5) lib/mongrel.rb:268:in `initialize'
+      mongrel (1.1.5) lib/mongrel.rb:268:in `new'
+      mongrel (1.1.5) lib/mongrel.rb:268:in `run'
+      rack (1.2.3) lib/rack/handler/mongrel.rb:38:in `run'
+      rack (1.2.3) lib/rack/server.rb:217:in `start'
+      railties (3.0.9) lib/rails/commands/server.rb:65:in `start'
+      railties (3.0.9) lib/rails/commands.rb:30
+      railties (3.0.9) lib/rails/commands.rb:27:in `tap'
+      railties (3.0.9) lib/rails/commands.rb:27
+      script/rails:6:in `require'
+      script/rails:6</code></pre>
+          </div>
+      </div>
+      
+      
+      
+      <h2 style="margin-top: 30px">Request</h2>
+      <p><b>Parameters</b>: <pre>{&quot;user_credentials&quot;=&gt;&quot;Bdrc3t1LaiWtygbJ4jD6&quot;,
+       &quot;user_id&quot;=&gt;&quot;1000000&quot;}</pre></p>
+      
+      <p><a href="#" onclick="document.getElementById('session_dump').style.display='block'; return false;">Show session dump</a></p>
+      <div id="session_dump" style="display:none"><pre></pre></div>
+      
+      <p><a href="#" onclick="document.getElementById('env_dump').style.display='block'; return false;">Show env dump</a></p>
+      <div id="env_dump" style="display:none"><pre>CONTENT_LENGTH: &quot;37&quot;
+      CONTENT_TYPE: &quot;application/x-www-form-urlencoded&quot;
+      GATEWAY_INTERFACE: &quot;CGI/1.2&quot;
+      HTTP_ACCEPT: &quot;*/*&quot;
+      HTTP_HOST: &quot;localhost:3000&quot;
+      HTTP_VERSION: &quot;HTTP/1.1&quot;
+      PATH_INFO: &quot;/api/v1/users/1000000/organizations&quot;
+      QUERY_STRING: &quot;&quot;
+      REMOTE_ADDR: &quot;127.0.0.1&quot;
+      REQUEST_METHOD: &quot;GET&quot;
+      REQUEST_PATH: &quot;/api/v1/users/1000000/organizations&quot;
+      REQUEST_URI: &quot;/api/v1/users/1000000/organizations&quot;
+      SCRIPT_NAME: &quot;&quot;
+      SERVER_NAME: &quot;localhost&quot;
+      SERVER_PORT: &quot;3000&quot;
+      SERVER_PROTOCOL: &quot;HTTP/1.1&quot;
+      SERVER_SOFTWARE: &quot;Mongrel 1.1.5&quot;
+      action_controller.instance: #&lt;Api::V1::UserOrganizationsController:0x10fc47d08 @_action_name=&quot;index&quot;, @_headers={&quot;Content-Type&quot;=&gt;&quot;text/html&quot;}, @_config=#&lt;OrderedHash {}&gt;, @_env={&quot;action_dispatch.request.formats&quot;=&gt;[#&lt;Mime::Type:0x11163a5f8 @symbol=nil, @synonyms=[], @string=&quot;*/*&quot;&gt;], &quot;action_dispatch.request.parameters&quot;=&gt;{&quot;user_credentials&quot;=&gt;&quot;Bdrc3t1LaiWtygbJ4jD6&quot;, &quot;action&quot;=&gt;&quot;index&quot;, &quot;user_id&quot;=&gt;&quot;1000000&quot;, &quot;controller&quot;=&gt;&quot;api/v1/user_organizations&quot;}, &quot;rack.session&quot;=&gt;{}, &quot;HTTP_ACCEPT&quot;=&gt;&quot;*/*&quot;, &quot;HTTP_HOST&quot;=&gt;&quot;localhost:3000&quot;, &quot;SERVER_NAME&quot;=&gt;&quot;localhost&quot;, &quot;action_dispatch.remote_ip&quot;=&gt;#&lt;ActionDispatch::RemoteIp::RemoteIpGetter:0x110098268 @env={...}, @trusted_proxies=/(^127\.0\.0\.1$|^(10|172\.(1[6-9]|2[0-9]|30|31)|192\.168)\.)/i, @check_ip_spoofing=true, @remote_addrs=[]&gt;, &quot;rack.url_scheme&quot;=&gt;&quot;http&quot;, &quot;REQUEST_PATH&quot;=&gt;&quot;/api/v1/users/1000000/organizations&quot;, &quot;CONTENT_LENGTH&quot;=&gt;&quot;37&quot;, &quot;action_dispatch.request.query_parameters&quot;=&gt;{}, &quot;action_dispatch.request.unsigned_session_cookie&quot;=&gt;{}, &quot;rack.errors&quot;=&gt;#&lt;IO:0x10dde1d00&gt;, &quot;CONTENT_TYPE&quot;=&gt;&quot;application/x-www-form-urlencoded&quot;, &quot;SERVER_PROTOCOL&quot;=&gt;&quot;HTTP/1.1&quot;, &quot;hoptoad.error_id&quot;=&gt;nil, &quot;action_dispatch.request.accepts&quot;=&gt;[#&lt;Mime::Type:0x11163a5f8 @symbol=nil, @synonyms=[], @string=&quot;*/*&quot;&gt;], &quot;action_dispatch.secret_token&quot;=&gt;&quot;83967e16c1b5ea7b4d2ebe7e14135a9472ea4e95cef9becba105bc5887b9fd997f834e05ffd72d402b425e9c2a87ef70b56c5ae19c86c1e49bfb03462c074425&quot;, &quot;rack.version&quot;=&gt;[1, 1], &quot;rack.run_once&quot;=&gt;false, &quot;SERVER_SOFTWARE&quot;=&gt;&quot;Mongrel 1.1.5&quot;, &quot;PATH_INFO&quot;=&gt;&quot;/api/v1/users/1000000/organizations&quot;, &quot;REMOTE_ADDR&quot;=&gt;&quot;127.0.0.1&quot;, &quot;action_dispatch.request.path_parameters&quot;=&gt;{:action=&gt;&quot;index&quot;, :user_id=&gt;&quot;1000000&quot;, :controller=&gt;&quot;api/v1/user_organizations&quot;}, &quot;SCRIPT_NAME&quot;=&gt;&quot;&quot;, &quot;action_dispatch.parameter_filter&quot;=&gt;[:password], &quot;action_dispatch.show_exceptions&quot;=&gt;true, &quot;rack.multithread&quot;=&gt;false, &quot;HTTP_VERSION&quot;=&gt;&quot;HTTP/1.1&quot;, &quot;action_dispatch.request.request_parameters&quot;=&gt;{&quot;user_credentials&quot;=&gt;&quot;Bdrc3t1LaiWtygbJ4jD6&quot;}, &quot;rack.request.form_vars&quot;=&gt;&quot;user_credentials=Bdrc3t1LaiWtygbJ4jD6&quot;, &quot;action_dispatch.cookies&quot;=&gt;{}, &quot;rack.multiprocess&quot;=&gt;false, &quot;REQUEST_URI&quot;=&gt;&quot;/api/v1/users/1000000/organizations&quot;, &quot;rack.request.query_hash&quot;=&gt;{}, &quot;rack.request.form_input&quot;=&gt;#&lt;StringIO:0x110099bb8&gt;, &quot;SERVER_PORT&quot;=&gt;&quot;3000&quot;, &quot;action_controller.instance&quot;=&gt;#&lt;Api::V1::UserOrganizationsController:0x10fc47d08 ...&gt;, &quot;rack.session.options&quot;=&gt;{:expire_after=&gt;nil, :httponly=&gt;true, :domain=&gt;nil, :path=&gt;&quot;/&quot;, :secure=&gt;false, :id=&gt;nil}, &quot;REQUEST_METHOD&quot;=&gt;&quot;GET&quot;, &quot;oauth2&quot;=&gt;#&lt;OAuth2::Provider::Rack::ResourceRequest:0x11007e958 @env={...}&gt;, &quot;rack.request.query_string&quot;=&gt;&quot;&quot;, &quot;rack.request.form_hash&quot;=&gt;{&quot;user_credentials&quot;=&gt;&quot;Bdrc3t1LaiWtygbJ4jD6&quot;}, &quot;action_dispatch.request.content_type&quot;=&gt;#&lt;Mime::Type:0x10d314e18 @symbol=:url_encoded_form, @synonyms=[], @string=&quot;application/x-www-form-urlencoded&quot;&gt;, &quot;QUERY_STRING&quot;=&gt;&quot;&quot;, &quot;rack.input&quot;=&gt;#&lt;StringIO:0x110099bb8&gt;, &quot;GATEWAY_INTERFACE&quot;=&gt;&quot;CGI/1.2&quot;}, @_response=#&lt;ActionDispatch::Response:0x10fc47628 @cookie=[], @cache_control={}, @body=[], @header={}, @writer=#&lt;Proc:0x000000010d62b868@/Users/michaelguterl/.rvm/gems/ree-1.8.7-2011.03@rm-board/gems/actionpack-3.0.9/lib/action_dispatch/http/response.rb:43&gt;, @block=nil, @blank=false, @status=200, @sending_file=false, @etag=nil, @length=0, @request=#&lt;ActionDispatch::Request:0x10fc47768 @request_method=&quot;GET&quot;, @filtered_parameters={&quot;user_credentials&quot;=&gt;&quot;Bdrc3t1LaiWtygbJ4jD6&quot;, &quot;action&quot;=&gt;&quot;index&quot;, &quot;user_id&quot;=&gt;&quot;1000000&quot;, &quot;controller&quot;=&gt;&quot;api/v1/user_organizations&quot;}, @fullpath=&quot;/api/v1/users/1000000/organizations&quot;, @env={&quot;action_dispatch.request.formats&quot;=&gt;[#&lt;Mime::Type:0x11163a5f8 @symbol=nil, @synonyms=[], @string=&quot;*/*&quot;&gt;], &quot;action_dispatch.request.parameters&quot;=&gt;{&quot;user_credentials&quot;=&gt;&quot;Bdrc3t1LaiWtygbJ4jD6&quot;, &quot;action&quot;=&gt;&quot;index&quot;, &quot;user_id&quot;=&gt;&quot;1000000&quot;, &quot;controller&quot;=&gt;&quot;api/v1/user_organizations&quot;}, &quot;rack.session&quot;=&gt;{}, &quot;HTTP_ACCEPT&quot;=&gt;&quot;*/*&quot;, &quot;HTTP_HOST&quot;=&gt;&quot;localhost:3000&quot;, &quot;SERVER_NAME&quot;=&gt;&quot;localhost&quot;, &quot;action_dispatch.remote_ip&quot;=&gt;#&lt;ActionDispatch::RemoteIp::RemoteIpGetter:0x110098268 @env={...}, @trusted_proxies=/(^127\.0\.0\.1$|^(10|172\.(1[6-9]|2[0-9]|30|31)|192\.168)\.)/i, @check_ip_spoofing=true, @remote_addrs=[]&gt;, &quot;rack.url_scheme&quot;=&gt;&quot;http&quot;, &quot;REQUEST_PATH&quot;=&gt;&quot;/api/v1/users/1000000/organizations&quot;, &quot;CONTENT_LENGTH&quot;=&gt;&quot;37&quot;, &quot;action_dispatch.request.query_parameters&quot;=&gt;{}, &quot;action_dispatch.request.unsigned_session_cookie&quot;=&gt;{}, &quot;rack.errors&quot;=&gt;#&lt;IO:0x10dde1d00&gt;, &quot;CONTENT_TYPE&quot;=&gt;&quot;application/x-www-form-urlencoded&quot;, &quot;SERVER_PROTOCOL&quot;=&gt;&quot;HTTP/1.1&quot;, &quot;hoptoad.error_id&quot;=&gt;nil, &quot;action_dispatch.request.accepts&quot;=&gt;[#&lt;Mime::Type:0x11163a5f8 @symbol=nil, @synonyms=[], @string=&quot;*/*&quot;&gt;], &quot;action_dispatch.secret_token&quot;=&gt;&quot;83967e16c1b5ea7b4d2ebe7e14135a9472ea4e95cef9becba105bc5887b9fd997f834e05ffd72d402b425e9c2a87ef70b56c5ae19c86c1e49bfb03462c074425&quot;, &quot;rack.version&quot;=&gt;[1, 1], &quot;rack.run_once&quot;=&gt;false, &quot;SERVER_SOFTWARE&quot;=&gt;&quot;Mongrel 1.1.5&quot;, &quot;PATH_INFO&quot;=&gt;&quot;/api/v1/users/1000000/organizations&quot;, &quot;REMOTE_ADDR&quot;=&gt;&quot;127.0.0.1&quot;, &quot;action_dispatch.request.path_parameters&quot;=&gt;{:action=&gt;&quot;index&quot;, :user_id=&gt;&quot;1000000&quot;, :controller=&gt;&quot;api/v1/user_organizations&quot;}, &quot;SCRIPT_NAME&quot;=&gt;&quot;&quot;, &quot;action_dispatch.parameter_filter&quot;=&gt;[:password], &quot;action_dispatch.show_exceptions&quot;=&gt;true, &quot;rack.multithread&quot;=&gt;false, &quot;HTTP_VERSION&quot;=&gt;&quot;HTTP/1.1&quot;, &quot;action_dispatch.request.request_parameters&quot;=&gt;{&quot;user_credentials&quot;=&gt;&quot;Bdrc3t1LaiWtygbJ4jD6&quot;}, &quot;rack.request.form_vars&quot;=&gt;&quot;user_credentials=Bdrc3t1LaiWtygbJ4jD6&quot;, &quot;action_dispatch.cookies&quot;=&gt;{}, &quot;rack.multiprocess&quot;=&gt;false, &quot;REQUEST_URI&quot;=&gt;&quot;/api/v1/users/1000000/organizations&quot;, &quot;rack.request.query_hash&quot;=&gt;{}, &quot;rack.request.form_input&quot;=&gt;#&lt;StringIO:0x110099bb8&gt;, &quot;SERVER_PORT&quot;=&gt;&quot;3000&quot;, &quot;action_controller.instance&quot;=&gt;#&lt;Api::V1::UserOrganizationsController:0x10fc47d08 ...&gt;, &quot;rack.session.options&quot;=&gt;{:expire_after=&gt;nil, :httponly=&gt;true, :domain=&gt;nil, :path=&gt;&quot;/&quot;, :secure=&gt;false, :id=&gt;nil}, &quot;REQUEST_METHOD&quot;=&gt;&quot;GET&quot;, &quot;oauth2&quot;=&gt;#&lt;OAuth2::Provider::Rack::ResourceRequest:0x11007e958 @env={...}&gt;, &quot;rack.request.query_string&quot;=&gt;&quot;&quot;, &quot;rack.request.form_hash&quot;=&gt;{&quot;user_credentials&quot;=&gt;&quot;Bdrc3t1LaiWtygbJ4jD6&quot;}, &quot;action_dispatch.request.content_type&quot;=&gt;#&lt;Mime::Type:0x10d314e18 @symbol=:url_encoded_form, @synonyms=[], @string=&quot;application/x-www-form-urlencoded&quot;&gt;, &quot;QUERY_STRING&quot;=&gt;&quot;&quot;, &quot;rack.input&quot;=&gt;#&lt;StringIO:0x110099bb8&gt;, &quot;GATEWAY_INTERFACE&quot;=&gt;&quot;CGI/1.2&quot;}, @method=&quot;GET&quot;&gt;&gt;, @lookup_context=#&lt;ActionView::LookupContext:0x10fc46c78 @view_paths=[#&lt;ActionView::FileSystemResolver:0x10f704d00 @caching=false, @path=&quot;/Users/michaelguterl/code/rm/board/app/views&quot;, @cached={}&gt;, #&lt;ActionView::FileSystemResolver:0x10f705c78 @caching=false, @path=&quot;/Users/michaelguterl/code/rm/board/vendor/plugins/ssl_requirement/app/views&quot;, @cached={}&gt;, #&lt;ActionView::FileSystemResolver:0x10f7528e8 @caching=false, @path=&quot;/Users/michaelguterl/code/rm/board/vendor/plugins/serialized_attributes/app/views&quot;, @cached={}&gt;, #&lt;ActionView::FileSystemResolver:0x10f7c7f08 @caching=false, @path=&quot;/Users/michaelguterl/code/rm/board/vendor/plugins/haml/app/views&quot;, @cached={}&gt;, #&lt;ActionView::FileSystemResolver:0x10f8f9188 @caching=false, @path=&quot;/Users/michaelguterl/code/rm/board/vendor/plugins/formtastic/app/views&quot;, @cached={}&gt;, #&lt;ActionView::FileSystemResolver:0x10f93dc48 @caching=false, @path=&quot;/Users/michaelguterl/code/rm/board/vendor/plugins/caching_presenter/app/views&quot;, @cached={}&gt;, #&lt;ActionView::FileSystemResolver:0x10f951c48 @caching=false, @path=&quot;/Users/michaelguterl/code/rm/board/vendor/plugins/attribute_mapper/app/views&quot;, @cached={}&gt;, #&lt;ActionView::FileSystemResolver:0x10f9c91a8 @caching=false, @path=&quot;/Users/michaelguterl/code/rm/board/vendor/plugins/alter_table/app/views&quot;, @cached={}&gt;], @details={:handlers=&gt;[:haml, :rhtml, :rjs, :rxml, :builder, :erb], :formats=&gt;[:html, :text, :js, :css, :ics, :csv, :xml, :rss, :atom, :yaml, :multipart_form, :url_encoded_form, :json], :locale=&gt;[:en, :en]}, @details_key=nil, @skip_default_locale=false, @frozen_formats=false&gt;, @_request=#&lt;ActionDispatch::Request:0x10fc47768 @request_method=&quot;GET&quot;, @filtered_parameters={&quot;user_credentials&quot;=&gt;&quot;Bdrc3t1LaiWtygbJ4jD6&quot;, &quot;action&quot;=&gt;&quot;index&quot;, &quot;user_id&quot;=&gt;&quot;1000000&quot;, &quot;controller&quot;=&gt;&quot;api/v1/user_organizations&quot;}, @fullpath=&quot;/api/v1/users/1000000/organizations&quot;, @env={&quot;action_dispatch.request.formats&quot;=&gt;[#&lt;Mime::Type:0x11163a5f8 @symbol=nil, @synonyms=[], @string=&quot;*/*&quot;&gt;], &quot;action_dispatch.request.parameters&quot;=&gt;{&quot;user_credentials&quot;=&gt;&quot;Bdrc3t1LaiWtygbJ4jD6&quot;, &quot;action&quot;=&gt;&quot;index&quot;, &quot;user_id&quot;=&gt;&quot;1000000&quot;, &quot;controller&quot;=&gt;&quot;api/v1/user_organizations&quot;}, &quot;rack.session&quot;=&gt;{}, &quot;HTTP_ACCEPT&quot;=&gt;&quot;*/*&quot;, &quot;HTTP_HOST&quot;=&gt;&quot;localhost:3000&quot;, &quot;SERVER_NAME&quot;=&gt;&quot;localhost&quot;, &quot;action_dispatch.remote_ip&quot;=&gt;#&lt;ActionDispatch::RemoteIp::RemoteIpGetter:0x110098268 @env={...}, @trusted_proxies=/(^127\.0\.0\.1$|^(10|172\.(1[6-9]|2[0-9]|30|31)|192\.168)\.)/i, @check_ip_spoofing=true, @remote_addrs=[]&gt;, &quot;rack.url_scheme&quot;=&gt;&quot;http&quot;, &quot;REQUEST_PATH&quot;=&gt;&quot;/api/v1/users/1000000/organizations&quot;, &quot;CONTENT_LENGTH&quot;=&gt;&quot;37&quot;, &quot;action_dispatch.request.query_parameters&quot;=&gt;{}, &quot;action_dispatch.request.unsigned_session_cookie&quot;=&gt;{}, &quot;rack.errors&quot;=&gt;#&lt;IO:0x10dde1d00&gt;, &quot;CONTENT_TYPE&quot;=&gt;&quot;application/x-www-form-urlencoded&quot;, &quot;SERVER_PROTOCOL&quot;=&gt;&quot;HTTP/1.1&quot;, &quot;hoptoad.error_id&quot;=&gt;nil, &quot;action_dispatch.request.accepts&quot;=&gt;[#&lt;Mime::Type:0x11163a5f8 @symbol=nil, @synonyms=[], @string=&quot;*/*&quot;&gt;], &quot;action_dispatch.secret_token&quot;=&gt;&quot;83967e16c1b5ea7b4d2ebe7e14135a9472ea4e95cef9becba105bc5887b9fd997f834e05ffd72d402b425e9c2a87ef70b56c5ae19c86c1e49bfb03462c074425&quot;, &quot;rack.version&quot;=&gt;[1, 1], &quot;rack.run_once&quot;=&gt;false, &quot;SERVER_SOFTWARE&quot;=&gt;&quot;Mongrel 1.1.5&quot;, &quot;PATH_INFO&quot;=&gt;&quot;/api/v1/users/1000000/organizations&quot;, &quot;REMOTE_ADDR&quot;=&gt;&quot;127.0.0.1&quot;, &quot;action_dispatch.request.path_parameters&quot;=&gt;{:action=&gt;&quot;index&quot;, :user_id=&gt;&quot;1000000&quot;, :controller=&gt;&quot;api/v1/user_organizations&quot;}, &quot;SCRIPT_NAME&quot;=&gt;&quot;&quot;, &quot;action_dispatch.parameter_filter&quot;=&gt;[:password], &quot;action_dispatch.show_exceptions&quot;=&gt;true, &quot;rack.multithread&quot;=&gt;false, &quot;HTTP_VERSION&quot;=&gt;&quot;HTTP/1.1&quot;, &quot;action_dispatch.request.request_parameters&quot;=&gt;{&quot;user_credentials&quot;=&gt;&quot;Bdrc3t1LaiWtygbJ4jD6&quot;}, &quot;rack.request.form_vars&quot;=&gt;&quot;user_credentials=Bdrc3t1LaiWtygbJ4jD6&quot;, &quot;action_dispatch.cookies&quot;=&gt;{}, &quot;rack.multiprocess&quot;=&gt;false, &quot;REQUEST_URI&quot;=&gt;&quot;/api/v1/users/1000000/organizations&quot;, &quot;rack.request.query_hash&quot;=&gt;{}, &quot;rack.request.form_input&quot;=&gt;#&lt;StringIO:0x110099bb8&gt;, &quot;SERVER_PORT&quot;=&gt;&quot;3000&quot;, &quot;action_controller.instance&quot;=&gt;#&lt;Api::V1::UserOrganizationsController:0x10fc47d08 ...&gt;, &quot;rack.session.options&quot;=&gt;{:expire_after=&gt;nil, :httponly=&gt;true, :domain=&gt;nil, :path=&gt;&quot;/&quot;, :secure=&gt;false, :id=&gt;nil}, &quot;REQUEST_METHOD&quot;=&gt;&quot;GET&quot;, &quot;oauth2&quot;=&gt;#&lt;OAuth2::Provider::Rack::ResourceRequest:0x11007e958 @env={...}&gt;, &quot;rack.request.query_string&quot;=&gt;&quot;&quot;, &quot;rack.request.form_hash&quot;=&gt;{&quot;user_credentials&quot;=&gt;&quot;Bdrc3t1LaiWtygbJ4jD6&quot;}, &quot;action_dispatch.request.content_type&quot;=&gt;#&lt;Mime::Type:0x10d314e18 @symbol=:url_encoded_form, @synonyms=[], @string=&quot;application/x-www-form-urlencoded&quot;&gt;, &quot;QUERY_STRING&quot;=&gt;&quot;&quot;, &quot;rack.input&quot;=&gt;#&lt;StringIO:0x110099bb8&gt;, &quot;GATEWAY_INTERFACE&quot;=&gt;&quot;CGI/1.2&quot;}, @method=&quot;GET&quot;&gt;, @_params={&quot;user_credentials&quot;=&gt;&quot;Bdrc3t1LaiWtygbJ4jD6&quot;, &quot;action&quot;=&gt;&quot;index&quot;, &quot;user_id&quot;=&gt;&quot;1000000&quot;, &quot;controller&quot;=&gt;&quot;api/v1/user_organizations&quot;}, @_response_body=nil, @view_context_class=nil, @action_has_layout=true, @_status=200&gt;
+      action_dispatch.cookies: {}
+      action_dispatch.parameter_filter: [:password]
+      action_dispatch.remote_ip: #&lt;ActionDispatch::RemoteIp::RemoteIpGetter:0x110098268 @env={&quot;action_dispatch.request.formats&quot;=&gt;[#&lt;Mime::Type:0x11163a5f8 @symbol=nil, @synonyms=[], @string=&quot;*/*&quot;&gt;], &quot;action_dispatch.request.parameters&quot;=&gt;{&quot;user_credentials&quot;=&gt;&quot;Bdrc3t1LaiWtygbJ4jD6&quot;, &quot;action&quot;=&gt;&quot;index&quot;, &quot;user_id&quot;=&gt;&quot;1000000&quot;, &quot;controller&quot;=&gt;&quot;api/v1/user_organizations&quot;}, &quot;rack.session&quot;=&gt;{}, &quot;HTTP_ACCEPT&quot;=&gt;&quot;*/*&quot;, &quot;HTTP_HOST&quot;=&gt;&quot;localhost:3000&quot;, &quot;SERVER_NAME&quot;=&gt;&quot;localhost&quot;, &quot;action_dispatch.remote_ip&quot;=&gt;#&lt;ActionDispatch::RemoteIp::RemoteIpGetter:0x110098268 ...&gt;, &quot;rack.url_scheme&quot;=&gt;&quot;http&quot;, &quot;REQUEST_PATH&quot;=&gt;&quot;/api/v1/users/1000000/organizations&quot;, &quot;CONTENT_LENGTH&quot;=&gt;&quot;37&quot;, &quot;action_dispatch.request.query_parameters&quot;=&gt;{}, &quot;action_dispatch.request.unsigned_session_cookie&quot;=&gt;{}, &quot;rack.errors&quot;=&gt;#&lt;IO:0x10dde1d00&gt;, &quot;CONTENT_TYPE&quot;=&gt;&quot;application/x-www-form-urlencoded&quot;, &quot;SERVER_PROTOCOL&quot;=&gt;&quot;HTTP/1.1&quot;, &quot;hoptoad.error_id&quot;=&gt;nil, &quot;action_dispatch.request.accepts&quot;=&gt;[#&lt;Mime::Type:0x11163a5f8 @symbol=nil, @synonyms=[], @string=&quot;*/*&quot;&gt;], &quot;action_dispatch.secret_token&quot;=&gt;&quot;83967e16c1b5ea7b4d2ebe7e14135a9472ea4e95cef9becba105bc5887b9fd997f834e05ffd72d402b425e9c2a87ef70b56c5ae19c86c1e49bfb03462c074425&quot;, &quot;rack.version&quot;=&gt;[1, 1], &quot;rack.run_once&quot;=&gt;false, &quot;SERVER_SOFTWARE&quot;=&gt;&quot;Mongrel 1.1.5&quot;, &quot;PATH_INFO&quot;=&gt;&quot;/api/v1/users/1000000/organizations&quot;, &quot;REMOTE_ADDR&quot;=&gt;&quot;127.0.0.1&quot;, &quot;action_dispatch.request.path_parameters&quot;=&gt;{:action=&gt;&quot;index&quot;, :user_id=&gt;&quot;1000000&quot;, :controller=&gt;&quot;api/v1/user_organizations&quot;}, &quot;SCRIPT_NAME&quot;=&gt;&quot;&quot;, &quot;action_dispatch.parameter_filter&quot;=&gt;[:password], &quot;action_dispatch.show_exceptions&quot;=&gt;true, &quot;rack.multithread&quot;=&gt;false, &quot;HTTP_VERSION&quot;=&gt;&quot;HTTP/1.1&quot;, &quot;action_dispatch.request.request_parameters&quot;=&gt;{&quot;user_credentials&quot;=&gt;&quot;Bdrc3t1LaiWtygbJ4jD6&quot;}, &quot;rack.request.form_vars&quot;=&gt;&quot;user_credentials=Bdrc3t1LaiWtygbJ4jD6&quot;, &quot;action_dispatch.cookies&quot;=&gt;{}, &quot;rack.multiprocess&quot;=&gt;false, &quot;REQUEST_URI&quot;=&gt;&quot;/api/v1/users/1000000/organizations&quot;, &quot;rack.request.query_hash&quot;=&gt;{}, &quot;rack.request.form_input&quot;=&gt;#&lt;StringIO:0x110099bb8&gt;, &quot;SERVER_PORT&quot;=&gt;&quot;3000&quot;, &quot;action_controller.instance&quot;=&gt;#&lt;Api::V1::UserOrganizationsController:0x10fc47d08 @_action_name=&quot;index&quot;, @_headers={&quot;Content-Type&quot;=&gt;&quot;text/html&quot;}, @_config=#&lt;OrderedHash {}&gt;, @_env={...}, @_response=#&lt;ActionDispatch::Response:0x10fc47628 @cookie=[], @cache_control={}, @body=[], @header={}, @writer=#&lt;Proc:0x000000010d62b868@/Users/michaelguterl/.rvm/gems/ree-1.8.7-2011.03@rm-board/gems/actionpack-3.0.9/lib/action_dispatch/http/response.rb:43&gt;, @block=nil, @blank=false, @status=200, @sending_file=false, @etag=nil, @length=0, @request=#&lt;ActionDispatch::Request:0x10fc47768 @request_method=&quot;GET&quot;, @filtered_parameters={&quot;user_credentials&quot;=&gt;&quot;Bdrc3t1LaiWtygbJ4jD6&quot;, &quot;action&quot;=&gt;&quot;index&quot;, &quot;user_id&quot;=&gt;&quot;1000000&quot;, &quot;controller&quot;=&gt;&quot;api/v1/user_organizations&quot;}, @fullpath=&quot;/api/v1/users/1000000/organizations&quot;, @env={...}, @method=&quot;GET&quot;&gt;&gt;, @lookup_context=#&lt;ActionView::LookupContext:0x10fc46c78 @view_paths=[#&lt;ActionView::FileSystemResolver:0x10f704d00 @caching=false, @path=&quot;/Users/michaelguterl/code/rm/board/app/views&quot;, @cached={}&gt;, #&lt;ActionView::FileSystemResolver:0x10f705c78 @caching=false, @path=&quot;/Users/michaelguterl/code/rm/board/vendor/plugins/ssl_requirement/app/views&quot;, @cached={}&gt;, #&lt;ActionView::FileSystemResolver:0x10f7528e8 @caching=false, @path=&quot;/Users/michaelguterl/code/rm/board/vendor/plugins/serialized_attributes/app/views&quot;, @cached={}&gt;, #&lt;ActionView::FileSystemResolver:0x10f7c7f08 @caching=false, @path=&quot;/Users/michaelguterl/code/rm/board/vendor/plugins/haml/app/views&quot;, @cached={}&gt;, #&lt;ActionView::FileSystemResolver:0x10f8f9188 @caching=false, @path=&quot;/Users/michaelguterl/code/rm/board/vendor/plugins/formtastic/app/views&quot;, @cached={}&gt;, #&lt;ActionView::FileSystemResolver:0x10f93dc48 @caching=false, @path=&quot;/Users/michaelguterl/code/rm/board/vendor/plugins/caching_presenter/app/views&quot;, @cached={}&gt;, #&lt;ActionView::FileSystemResolver:0x10f951c48 @caching=false, @path=&quot;/Users/michaelguterl/code/rm/board/vendor/plugins/attribute_mapper/app/views&quot;, @cached={}&gt;, #&lt;ActionView::FileSystemResolver:0x10f9c91a8 @caching=false, @path=&quot;/Users/michaelguterl/code/rm/board/vendor/plugins/alter_table/app/views&quot;, @cached={}&gt;], @details={:handlers=&gt;[:haml, :rhtml, :rjs, :rxml, :builder, :erb], :formats=&gt;[:html, :text, :js, :css, :ics, :csv, :xml, :rss, :atom, :yaml, :multipart_form, :url_encoded_form, :json], :locale=&gt;[:en, :en]}, @details_key=nil, @skip_default_locale=false, @frozen_formats=false&gt;, @_request=#&lt;ActionDispatch::Request:0x10fc47768 @request_method=&quot;GET&quot;, @filtered_parameters={&quot;user_credentials&quot;=&gt;&quot;Bdrc3t1LaiWtygbJ4jD6&quot;, &quot;action&quot;=&gt;&quot;index&quot;, &quot;user_id&quot;=&gt;&quot;1000000&quot;, &quot;controller&quot;=&gt;&quot;api/v1/user_organizations&quot;}, @fullpath=&quot;/api/v1/users/1000000/organizations&quot;, @env={...}, @method=&quot;GET&quot;&gt;, @_params={&quot;user_credentials&quot;=&gt;&quot;Bdrc3t1LaiWtygbJ4jD6&quot;, &quot;action&quot;=&gt;&quot;index&quot;, &quot;user_id&quot;=&gt;&quot;1000000&quot;, &quot;controller&quot;=&gt;&quot;api/v1/user_organizations&quot;}, @_response_body=nil, @view_context_class=nil, @action_has_layout=true, @_status=200&gt;, &quot;rack.session.options&quot;=&gt;{:expire_after=&gt;nil, :httponly=&gt;true, :domain=&gt;nil, :path=&gt;&quot;/&quot;, :secure=&gt;false, :id=&gt;nil}, &quot;REQUEST_METHOD&quot;=&gt;&quot;GET&quot;, &quot;oauth2&quot;=&gt;#&lt;OAuth2::Provider::Rack::ResourceRequest:0x11007e958 @env={...}&gt;, &quot;rack.request.query_string&quot;=&gt;&quot;&quot;, &quot;rack.request.form_hash&quot;=&gt;{&quot;user_credentials&quot;=&gt;&quot;Bdrc3t1LaiWtygbJ4jD6&quot;}, &quot;action_dispatch.request.content_type&quot;=&gt;#&lt;Mime::Type:0x10d314e18 @symbol=:url_encoded_form, @synonyms=[], @string=&quot;application/x-www-form-urlencoded&quot;&gt;, &quot;QUERY_STRING&quot;=&gt;&quot;&quot;, &quot;rack.input&quot;=&gt;#&lt;StringIO:0x110099bb8&gt;, &quot;GATEWAY_INTERFACE&quot;=&gt;&quot;CGI/1.2&quot;}, @trusted_proxies=/(^127\.0\.0\.1$|^(10|172\.(1[6-9]|2[0-9]|30|31)|192\.168)\.)/i, @check_ip_spoofing=true, @remote_addrs=[]&gt;
+      action_dispatch.request.accepts: [#&lt;Mime::Type:0x11163a5f8 @symbol=nil, @synonyms=[], @string=&quot;*/*&quot;&gt;]
+      action_dispatch.request.content_type: #&lt;Mime::Type:0x10d314e18 @symbol=:url_encoded_form, @synonyms=[], @string=&quot;application/x-www-form-urlencoded&quot;&gt;
+      action_dispatch.request.formats: [#&lt;Mime::Type:0x11163a5f8 @symbol=nil, @synonyms=[], @string=&quot;*/*&quot;&gt;]
+      action_dispatch.request.parameters: {&quot;user_credentials&quot;=&gt;&quot;Bdrc3t1LaiWtygbJ4jD6&quot;, &quot;action&quot;=&gt;&quot;index&quot;, &quot;user_id&quot;=&gt;&quot;1000000&quot;, &quot;controller&quot;=&gt;&quot;api/v1/user_organizations&quot;}
+      action_dispatch.request.path_parameters: {:action=&gt;&quot;index&quot;, :user_id=&gt;&quot;1000000&quot;, :controller=&gt;&quot;api/v1/user_organizations&quot;}
+      action_dispatch.request.query_parameters: {}
+      action_dispatch.request.request_parameters: {&quot;user_credentials&quot;=&gt;&quot;Bdrc3t1LaiWtygbJ4jD6&quot;}
+      action_dispatch.request.unsigned_session_cookie: {}
+      action_dispatch.secret_token: &quot;83967e16c1b5ea7b4d2ebe7e14135a9472ea4e95cef9becba105bc5887b9fd997f834e05ffd72d402b425e9c2a87ef70b56c5ae19c86c1e49bfb03462c074425&quot;
+      action_dispatch.show_exceptions: true
+      hoptoad.error_id: nil
+      oauth2: #&lt;OAuth2::Provider::Rack::ResourceRequest:0x11007e958 @env={&quot;action_dispatch.request.formats&quot;=&gt;[#&lt;Mime::Type:0x11163a5f8 @symbol=nil, @synonyms=[], @string=&quot;*/*&quot;&gt;], &quot;action_dispatch.request.parameters&quot;=&gt;{&quot;user_credentials&quot;=&gt;&quot;Bdrc3t1LaiWtygbJ4jD6&quot;, &quot;action&quot;=&gt;&quot;index&quot;, &quot;user_id&quot;=&gt;&quot;1000000&quot;, &quot;controller&quot;=&gt;&quot;api/v1/user_organizations&quot;}, &quot;rack.session&quot;=&gt;{}, &quot;HTTP_ACCEPT&quot;=&gt;&quot;*/*&quot;, &quot;HTTP_HOST&quot;=&gt;&quot;localhost:3000&quot;, &quot;SERVER_NAME&quot;=&gt;&quot;localhost&quot;, &quot;action_dispatch.remote_ip&quot;=&gt;#&lt;ActionDispatch::RemoteIp::RemoteIpGetter:0x110098268 @env={...}, @trusted_proxies=/(^127\.0\.0\.1$|^(10|172\.(1[6-9]|2[0-9]|30|31)|192\.168)\.)/i, @check_ip_spoofing=true, @remote_addrs=[]&gt;, &quot;rack.url_scheme&quot;=&gt;&quot;http&quot;, &quot;REQUEST_PATH&quot;=&gt;&quot;/api/v1/users/1000000/organizations&quot;, &quot;CONTENT_LENGTH&quot;=&gt;&quot;37&quot;, &quot;action_dispatch.request.query_parameters&quot;=&gt;{}, &quot;action_dispatch.request.unsigned_session_cookie&quot;=&gt;{}, &quot;rack.errors&quot;=&gt;#&lt;IO:0x10dde1d00&gt;, &quot;CONTENT_TYPE&quot;=&gt;&quot;application/x-www-form-urlencoded&quot;, &quot;SERVER_PROTOCOL&quot;=&gt;&quot;HTTP/1.1&quot;, &quot;hoptoad.error_id&quot;=&gt;nil, &quot;action_dispatch.request.accepts&quot;=&gt;[#&lt;Mime::Type:0x11163a5f8 @symbol=nil, @synonyms=[], @string=&quot;*/*&quot;&gt;], &quot;action_dispatch.secret_token&quot;=&gt;&quot;83967e16c1b5ea7b4d2ebe7e14135a9472ea4e95cef9becba105bc5887b9fd997f834e05ffd72d402b425e9c2a87ef70b56c5ae19c86c1e49bfb03462c074425&quot;, &quot;rack.version&quot;=&gt;[1, 1], &quot;rack.run_once&quot;=&gt;false, &quot;SERVER_SOFTWARE&quot;=&gt;&quot;Mongrel 1.1.5&quot;, &quot;PATH_INFO&quot;=&gt;&quot;/api/v1/users/1000000/organizations&quot;, &quot;REMOTE_ADDR&quot;=&gt;&quot;127.0.0.1&quot;, &quot;action_dispatch.request.path_parameters&quot;=&gt;{:action=&gt;&quot;index&quot;, :user_id=&gt;&quot;1000000&quot;, :controller=&gt;&quot;api/v1/user_organizations&quot;}, &quot;SCRIPT_NAME&quot;=&gt;&quot;&quot;, &quot;action_dispatch.parameter_filter&quot;=&gt;[:password], &quot;action_dispatch.show_exceptions&quot;=&gt;true, &quot;rack.multithread&quot;=&gt;false, &quot;HTTP_VERSION&quot;=&gt;&quot;HTTP/1.1&quot;, &quot;action_dispatch.request.request_parameters&quot;=&gt;{&quot;user_credentials&quot;=&gt;&quot;Bdrc3t1LaiWtygbJ4jD6&quot;}, &quot;rack.request.form_vars&quot;=&gt;&quot;user_credentials=Bdrc3t1LaiWtygbJ4jD6&quot;, &quot;action_dispatch.cookies&quot;=&gt;{}, &quot;rack.multiprocess&quot;=&gt;false, &quot;REQUEST_URI&quot;=&gt;&quot;/api/v1/users/1000000/organizations&quot;, &quot;rack.request.query_hash&quot;=&gt;{}, &quot;rack.request.form_input&quot;=&gt;#&lt;StringIO:0x110099bb8&gt;, &quot;SERVER_PORT&quot;=&gt;&quot;3000&quot;, &quot;action_controller.instance&quot;=&gt;#&lt;Api::V1::UserOrganizationsController:0x10fc47d08 @_action_name=&quot;index&quot;, @_headers={&quot;Content-Type&quot;=&gt;&quot;text/html&quot;}, @_config=#&lt;OrderedHash {}&gt;, @_env={...}, @_response=#&lt;ActionDispatch::Response:0x10fc47628 @cookie=[], @cache_control={}, @body=[], @header={}, @writer=#&lt;Proc:0x000000010d62b868@/Users/michaelguterl/.rvm/gems/ree-1.8.7-2011.03@rm-board/gems/actionpack-3.0.9/lib/action_dispatch/http/response.rb:43&gt;, @block=nil, @blank=false, @status=200, @sending_file=false, @etag=nil, @length=0, @request=#&lt;ActionDispatch::Request:0x10fc47768 @request_method=&quot;GET&quot;, @filtered_parameters={&quot;user_credentials&quot;=&gt;&quot;Bdrc3t1LaiWtygbJ4jD6&quot;, &quot;action&quot;=&gt;&quot;index&quot;, &quot;user_id&quot;=&gt;&quot;1000000&quot;, &quot;controller&quot;=&gt;&quot;api/v1/user_organizations&quot;}, @fullpath=&quot;/api/v1/users/1000000/organizations&quot;, @env={...}, @method=&quot;GET&quot;&gt;&gt;, @lookup_context=#&lt;ActionView::LookupContext:0x10fc46c78 @view_paths=[#&lt;ActionView::FileSystemResolver:0x10f704d00 @caching=false, @path=&quot;/Users/michaelguterl/code/rm/board/app/views&quot;, @cached={}&gt;, #&lt;ActionView::FileSystemResolver:0x10f705c78 @caching=false, @path=&quot;/Users/michaelguterl/code/rm/board/vendor/plugins/ssl_requirement/app/views&quot;, @cached={}&gt;, #&lt;ActionView::FileSystemResolver:0x10f7528e8 @caching=false, @path=&quot;/Users/michaelguterl/code/rm/board/vendor/plugins/serialized_attributes/app/views&quot;, @cached={}&gt;, #&lt;ActionView::FileSystemResolver:0x10f7c7f08 @caching=false, @path=&quot;/Users/michaelguterl/code/rm/board/vendor/plugins/haml/app/views&quot;, @cached={}&gt;, #&lt;ActionView::FileSystemResolver:0x10f8f9188 @caching=false, @path=&quot;/Users/michaelguterl/code/rm/board/vendor/plugins/formtastic/app/views&quot;, @cached={}&gt;, #&lt;ActionView::FileSystemResolver:0x10f93dc48 @caching=false, @path=&quot;/Users/michaelguterl/code/rm/board/vendor/plugins/caching_presenter/app/views&quot;, @cached={}&gt;, #&lt;ActionView::FileSystemResolver:0x10f951c48 @caching=false, @path=&quot;/Users/michaelguterl/code/rm/board/vendor/plugins/attribute_mapper/app/views&quot;, @cached={}&gt;, #&lt;ActionView::FileSystemResolver:0x10f9c91a8 @caching=false, @path=&quot;/Users/michaelguterl/code/rm/board/vendor/plugins/alter_table/app/views&quot;, @cached={}&gt;], @details={:handlers=&gt;[:haml, :rhtml, :rjs, :rxml, :builder, :erb], :formats=&gt;[:html, :text, :js, :css, :ics, :csv, :xml, :rss, :atom, :yaml, :multipart_form, :url_encoded_form, :json], :locale=&gt;[:en, :en]}, @details_key=nil, @skip_default_locale=false, @frozen_formats=false&gt;, @_request=#&lt;ActionDispatch::Request:0x10fc47768 @request_method=&quot;GET&quot;, @filtered_parameters={&quot;user_credentials&quot;=&gt;&quot;Bdrc3t1LaiWtygbJ4jD6&quot;, &quot;action&quot;=&gt;&quot;index&quot;, &quot;user_id&quot;=&gt;&quot;1000000&quot;, &quot;controller&quot;=&gt;&quot;api/v1/user_organizations&quot;}, @fullpath=&quot;/api/v1/users/1000000/organizations&quot;, @env={...}, @method=&quot;GET&quot;&gt;, @_params={&quot;user_credentials&quot;=&gt;&quot;Bdrc3t1LaiWtygbJ4jD6&quot;, &quot;action&quot;=&gt;&quot;index&quot;, &quot;user_id&quot;=&gt;&quot;1000000&quot;, &quot;controller&quot;=&gt;&quot;api/v1/user_organizations&quot;}, @_response_body=nil, @view_context_class=nil, @action_has_layout=true, @_status=200&gt;, &quot;rack.session.options&quot;=&gt;{:expire_after=&gt;nil, :httponly=&gt;true, :domain=&gt;nil, :path=&gt;&quot;/&quot;, :secure=&gt;false, :id=&gt;nil}, &quot;REQUEST_METHOD&quot;=&gt;&quot;GET&quot;, &quot;oauth2&quot;=&gt;#&lt;OAuth2::Provider::Rack::ResourceRequest:0x11007e958 ...&gt;, &quot;rack.request.query_string&quot;=&gt;&quot;&quot;, &quot;rack.request.form_hash&quot;=&gt;{&quot;user_credentials&quot;=&gt;&quot;Bdrc3t1LaiWtygbJ4jD6&quot;}, &quot;action_dispatch.request.content_type&quot;=&gt;#&lt;Mime::Type:0x10d314e18 @symbol=:url_encoded_form, @synonyms=[], @string=&quot;application/x-www-form-urlencoded&quot;&gt;, &quot;QUERY_STRING&quot;=&gt;&quot;&quot;, &quot;rack.input&quot;=&gt;#&lt;StringIO:0x110099bb8&gt;, &quot;GATEWAY_INTERFACE&quot;=&gt;&quot;CGI/1.2&quot;}&gt;
+      rack.errors: #&lt;IO:0x10dde1d00&gt;
+      rack.input: #&lt;StringIO:0x110099bb8&gt;
+      rack.multiprocess: false
+      rack.multithread: false
+      rack.request.form_hash: {&quot;user_credentials&quot;=&gt;&quot;Bdrc3t1LaiWtygbJ4jD6&quot;}
+      rack.request.form_input: #&lt;StringIO:0x110099bb8&gt;
+      rack.request.form_vars: &quot;user_credentials=Bdrc3t1LaiWtygbJ4jD6&quot;
+      rack.request.query_hash: {}
+      rack.request.query_string: &quot;&quot;
+      rack.run_once: false
+      rack.session: {}
+      rack.session.options: {:expire_after=&gt;nil, :httponly=&gt;true, :domain=&gt;nil, :path=&gt;&quot;/&quot;, :secure=&gt;false, :id=&gt;nil}
+      rack.url_scheme: &quot;http&quot;
+      rack.version: [1, 1]</pre></div>
+      
+      
+      <h2 style="margin-top: 30px">Response</h2>
+      <p><b>Headers</b>: <pre>None</pre></p>
+      
+      
+      
+      </body>
+      </html>
+
+    http_version: "1.1"

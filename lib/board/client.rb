@@ -34,6 +34,7 @@ module Board
     autoload :Users, 'board/client/users'
     autoload :Candidates, 'board/client/candidates'
     autoload :Organizations, 'board/client/organizations'
+    autoload :UserOrganizations, 'board/client/user_organizations'
 
     def users
       Users.new(self)
@@ -45,6 +46,10 @@ module Board
 
     def organizations
       Organizations.new(self)
+    end
+
+    def user_organizations
+      UserOrganizations.new(self)
     end
 
   end

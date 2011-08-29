@@ -10,8 +10,14 @@ module Board
     end
 
     def get(path, attributes = {})
-      Hashie::Mash.new(@client.get(path, attributes))
+      json = @client.get(path, attributes)
+
+      if json.is_a?(Array)
+        json.map { |item| Hashie::Mash.new(item) }
+      else
+        Hashie::Mash.new(json)
+      end
     end
 
   end
- end
+end
