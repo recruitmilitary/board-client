@@ -36,7 +36,7 @@ module Board
 
       case response.code
       when /2../
-        if response.body.empty?
+        if response.body.blank?
           true
         else
           Yajl::Parser.parse(response.body)
