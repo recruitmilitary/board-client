@@ -1,0 +1,30 @@
+--- 
+- !ruby/struct:VCR::HTTPInteraction 
+  request: !ruby/struct:VCR::Request 
+    method: :get
+    uri: http://localhost:3000/api/v1/organizations
+    body: user_credentials=Bdrc3t1LaiWtygbJ4jD6&name=RecruitMilitary
+    headers: 
+      content-type: 
+      - application/x-www-form-urlencoded
+  response: !ruby/struct:VCR::Response 
+    status: !ruby/struct:VCR::ResponseStatus 
+      code: 200
+      message: OK
+    headers: 
+      x-ua-compatible: 
+      - IE=Edge
+      etag: 
+      - "\"f10c46aadf62a0a161ddb3b64ebe8885\""
+      content-type: 
+      - application/json; charset=utf-8
+      date: 
+      - Mon, 29 Aug 2011 13:54:23 GMT
+      x-runtime: 
+      - "0.178084"
+      cache-control: 
+      - max-age=0, private, must-revalidate
+      transfer-encoding: 
+      - chunked
+    body: "{\"name\":\"RecruitMilitary\",\"tracking_code\":null,\"created_at\":\"2011-08-26T15:10:22Z\",\"administrator_id\":null,\"updated_at\":\"2011-08-26T15:10:22Z\",\"logo\":{\"url\":null,\"medium\":{\"url\":null},\"large\":{\"url\":null},\"small\":{\"url\":null},\"mini\":{\"url\":null}},\"jobs_count\":0,\"id\":1,\"website\":\"http://www.recruitmilitary.com\",\"employee_count_id\":null,\"description\":null,\"cached_slug\":\"recruitmilitary\",\"headquarters_id\":null}"
+    http_version: "1.1"
