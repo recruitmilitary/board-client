@@ -41,10 +41,28 @@ module Board
         else
           Yajl::Parser.parse(response.body)
         end
+      when '400'
+        raise Client::BadRequest.new(response)
+      when '401'
+        raise Client::Unauthorized.new(response)
+      when '403'
+        raise Client::Forbidden.new(response)
       when '404'
         raise Client::NotFound.new(response)
+      when '406'
+        raise Client::NotAcceptable.new(response)
       when '409'
         raise Client::Conflict.new(response)
+      when '422'
+        raise Client::UnprocessableEntity.new(response)
+      when '500'
+        raise Client::InternalServerError.new(response)
+      when '501'
+        raise Client::NotImplemented.new(response)
+      when '502'
+        raise Client::BadGateway.new(response)
+      when '503'
+        raise Client::ServiceUnavailable.new(response)
       else
         raise Client::Error.new(response)
       end

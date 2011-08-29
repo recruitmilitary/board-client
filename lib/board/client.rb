@@ -15,8 +15,17 @@ module Board
       end
     end
 
-    NotFound = Class.new(Error)
-    Conflict = Class.new(Error)
+    BadRequest          = Class.new(Error)
+    Unauthorized        = Class.new(Error)
+    Forbidden           = Class.new(Error)
+    NotFound            = Class.new(Error)
+    NotAcceptable       = Class.new(Error)
+    Conflict            = Class.new(Error)
+    UnprocessableEntity = Class.new(Error)
+    InternalServerError = Class.new(Error)
+    NotImplemented      = Class.new(Error)
+    BadGateway          = Class.new(Error)
+    ServiceUnavailable  = Class.new(Error)
 
     include Request
 
