@@ -33,6 +33,7 @@ module Board
     autoload :API, 'board/client/api'
     autoload :Users, 'board/client/users'
     autoload :Candidates, 'board/client/candidates'
+    autoload :Organizations, 'board/client/organizations'
 
     def users
       Users.new(self)
@@ -40,6 +41,10 @@ module Board
 
     def candidates
       Candidates.new(self)
+    end
+
+    def organizations
+      Organizations.new(self)
     end
 
   end
