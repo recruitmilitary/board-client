@@ -34,9 +34,9 @@ module Board
     end
     self.default_endpoint = 'https://board.recruitmilitary.com/api/v1'
 
-    def initialize(api_key, endpoint = Client.default_endpoint, options = {})
+    def initialize(api_key, options = {})
       @api_key  = api_key
-      @endpoint = endpoint
+      @endpoint = options[:endpoint] || Client.default_endpoint
       @ssl      = options[:ssl] || {}
     end
 
