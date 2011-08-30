@@ -22,6 +22,7 @@ module Board
       if uri.port == 443 # ssl?
         http.use_ssl = true
         http.verify_mode = OpenSSL::SSL::VERIFY_PEER
+        http.ca_path = @ssl[:ca_path] if @ssl[:ca_path]
       end
 
       case method
