@@ -21,7 +21,7 @@ Gem::Specification.new do |s|
 
   s.add_dependency 'rest-client', '~> 1.6.1'
   s.add_dependency 'yajl-ruby',   '~> 0.7.7'
-  s.add_dependency 'hashie',      '~> 1.1.0'
+  s.add_dependency 'hashie',      '~> 1.2.0'
 
   s.add_development_dependency 'rspec', '~> 2.6.0'
   s.add_development_dependency 'vcr', '~> 1.11.1'
