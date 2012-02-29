@@ -31,8 +31,11 @@ describe 'User Find' do
     context 'when the user exists' do
       use_vcr_cassette 'user exists with email'
 
-      it 'returns a user with the correct attributes' do
-        user = board.users.find(:email => 'candidate@recruitmilitary.com')
+      it 'returns all users with the correct attributes' do
+        users = board.users.find(:email => 'candidate@recruitmilitary.com')
+
+        users.should_not be_empty
+        user = users.first
 
         user.email.should == 'candidate@recruitmilitary.com'
       end
@@ -41,33 +44,12 @@ describe 'User Find' do
     context 'when the user does not exist' do
       use_vcr_cassette 'user email does not exist'
 
-      it 'raises a not found exception' do
-        expect {
-          board.users.find(:email => 'michael@jordan.com')
-        }.to raise_error(Board::Client::NotFound)
+      it 'returns an empty collection' do
+        users = board.users.find(:email => 'michael@jordan.com')
+
+        users.should be_empty
       end
     end
   end
 
-  context 'by email_md5' do
-    context 'when the user exists' do
-      use_vcr_cassette 'user exists with email md5'
-
-      it 'returns a user with the correct attributes' do
-        user = board.users.find(:email_md5 => '3e67fa7c8045d085e66a51deee26cbc4')
-
-        user.email.should == 'staff@recruitmilitary.com'
-      end
-    end
-
-    context 'when the user does not exist' do
-      use_vcr_cassette 'user email md5 does not exist'
-
-      it 'raises a not found exception' do
-        expect {
-          board.users.find(:email_md5 => '93e8d736de5088cb392465e024b69eef')
-        }.to raise_error(Board::Client::NotFound)
-      end
-    end
-  end
 end

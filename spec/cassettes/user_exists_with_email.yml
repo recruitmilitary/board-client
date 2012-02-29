@@ -12,19 +12,21 @@
       code: 200
       message: OK
     headers: 
-      x-ua-compatible: 
-      - IE=Edge
-      etag: 
-      - "\"6968d4fa87d33c6b92252460a9a53189\""
-      content-type: 
-      - application/json; charset=utf-8
-      date: 
-      - Mon, 29 Aug 2011 18:19:08 GMT
-      x-runtime: 
-      - "0.924592"
       cache-control: 
       - max-age=0, private, must-revalidate
-      transfer-encoding: 
-      - chunked
-    body: "{\"unsubscribed_at\":null,\"single_access_token\":null,\"last_request_at\":null,\"hidden_at\":null,\"created_at\":\"2011-08-29T18:18:19Z\",\"agreement_acknowledged_at\":null,\"searchable\":true,\"crypted_password\":\"a6c89ee2f9aa412837a309c68823e0a5cd70e10f26bc79e39d538c98ba6a5daabd321dd30e2e035b16fcc5cc2139eae0e60d4bd747591388563df3f1d698c809\",\"updated_at\":\"2011-08-29T18:18:19Z\",\"secret_id\":null,\"perishable_token\":\"PzmYP1k6paCm8wLwFxOY\",\"agreement_initials\":null,\"id\":100,\"email_md5\":\"7618e7a4937b37640c24149bdf21cf27\",\"current_login_ip\":null,\"password_salt\":\"_Ef2Xm-HVbCJKk_zWmpd\",\"email_invalid_at\":null,\"current_login_at\":null,\"primary_role_id\":1,\"phone\":null,\"persistence_token\":\"79d380dcfd65e6909a693619ff41e1b34fab361d23002685c51208bddf4585066ff4395ffb0169c89fb2737e5b0166de3e6043d47f139c0536fb2a56de88e86e\",\"login_count\":78,\"last_name\":\"Reichel\",\"last_login_ip\":null,\"last_login_at\":\"2011-08-16T18:18:19Z\",\"first_name\":\"Raina\",\"email\":\"candidate@recruitmilitary.com\",\"confirmed_at\":\"2011-08-27T18:18:19Z\"}"
+      content-length: 
+      - "1039"
+      set-cookie: 
+      - _board_session=BAh7ByIKZmxhc2hvOiVBY3Rpb25EaXNwYXRjaDo6Rmxhc2g6OkZsYXNoSGFzaAk6CUBub3cwOg1AZmxhc2hlc3sGOhFraXNzX21ldHJpY3NbBnsGOg1pZGVudGlmeSIec3RhZmZAcmVjcnVpdG1pbGl0YXJ5LmNvbToMQGNsb3NlZEY6CkB1c2VkbzoIU2V0BjoKQGhhc2h7ACIPc2Vzc2lvbl9pZCIlYjUzYjA5OWVhNWVlYWZmNDk1NjBmNTQ3ZTM5NmE2M2Q%3D--9e72f84c2bc3ad9ffb89d39de5b8b16e3d41574a; path=/; HttpOnly
+      content-type: 
+      - application/json; charset=utf-8
+      x-runtime: 
+      - "0.829090"
+      etag: 
+      - "\"30c1cc35124ac55e31759e5a4f602484\""
+      x-ua-compatible: 
+      - IE=Edge
+      date: 
+      - Wed, 29 Feb 2012 17:43:51 GMT
+    body: "[{\"updated_at\":\"2012-02-29T17:30:31Z\",\"first_name\":\"Tianna\",\"confirmed_at\":\"2012-02-27T17:30:31Z\",\"single_access_token\":null,\"phone\":null,\"persistence_token\":\"502e2831d711c9952926da7641d082008710733160088befbb7465045d869824d9d6407333b07edc5915588bed8ce115b804e4a80aca408b3d7bca7c56b5a385\",\"perishable_token\":\"SlYhAb1CDnrXiY12b34\",\"email_md5\":\"7618e7a4937b37640c24149bdf21cf27\",\"agreement_acknowledged_at\":null,\"id\":100,\"email_invalid_at\":null,\"email\":\"candidate@recruitmilitary.com\",\"crypted_password\":\"c9b430bb0e5eac834416fba2664dd5c0cef94371aefc648026fe31d7b4ff4590fce88234b18140f18a3119519ea2ee0a41239a14d73149f8bbcab1a15b6bc866\",\"secret_id\":null,\"searchable\":true,\"last_login_at\":\"2012-02-14T17:30:31Z\",\"confirmation_token\":\"JQfpPCYEyAgXrGt43au\",\"agreement_initials\":null,\"last_name\":\"Orn\",\"last_login_ip\":null,\"current_login_at\":null,\"unsubscribed_at\":null,\"primary_role_id\":1,\"hidden_at\":null,\"created_at\":\"2012-02-29T17:30:31Z\",\"password_salt\":\"Fzpd6oEh9vzLGgrP6gyn\",\"login_count\":18,\"last_request_at\":null,\"current_login_ip\":null}]"
     http_version: "1.1"

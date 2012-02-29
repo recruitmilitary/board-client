@@ -12,19 +12,21 @@
       code: 200
       message: OK
     headers: 
-      x-ua-compatible: 
-      - IE=Edge
-      etag: 
-      - "\"734cdf126356d9c19264d3c61ea0ce7b\""
-      content-type: 
-      - application/json; charset=utf-8
-      date: 
-      - Mon, 29 Aug 2011 18:19:07 GMT
-      x-runtime: 
-      - "0.769667"
       cache-control: 
       - max-age=0, private, must-revalidate
-      transfer-encoding: 
-      - chunked
-    body: "{\"unsubscribed_at\":null,\"single_access_token\":\"Bdrc3t1LaiWtygbJ4jD6\",\"last_request_at\":\"2011-08-29T18:19:07Z\",\"hidden_at\":null,\"created_at\":\"2011-08-29T18:18:18Z\",\"agreement_acknowledged_at\":null,\"searchable\":false,\"crypted_password\":\"0c2e2255b213959ab77da74dd2a427681990dafefb999048f4fcc5246fd8655216b5ea8dec50d36f47560562d341c0b2fd5df84a1b951be5d9d75fffb07e4974\",\"updated_at\":\"2011-08-29T18:19:07Z\",\"secret_id\":\"8997cf28a075ac67ac4372eda8fefc39\",\"perishable_token\":\"6EE8U5OWyuDiqAsmNnUE\",\"agreement_initials\":null,\"id\":1,\"email_md5\":\"3e67fa7c8045d085e66a51deee26cbc4\",\"current_login_ip\":null,\"password_salt\":\"BUuHfUgauBblH5J5aghi\",\"email_invalid_at\":null,\"current_login_at\":null,\"primary_role_id\":3,\"phone\":null,\"persistence_token\":\"ea6022d6e567f73727b2e80a0cae54b97c21031ee8232fa91622553f537ef765a47a8262fc1f1fb3ee15ed7b7d464a745bf93b09ae9bd1832404fa9acd222a5c\",\"login_count\":0,\"last_name\":\"McStafforson\",\"last_login_ip\":null,\"last_login_at\":null,\"first_name\":\"Staff\",\"email\":\"staff@recruitmilitary.com\",\"confirmed_at\":\"2011-08-29T18:18:18Z\"}"
+      content-length: 
+      - "1088"
+      set-cookie: 
+      - _board_session=BAh7ByIKZmxhc2hvOiVBY3Rpb25EaXNwYXRjaDo6Rmxhc2g6OkZsYXNoSGFzaAk6CUBub3cwOg1AZmxhc2hlc3sGOhFraXNzX21ldHJpY3NbBnsGOg1pZGVudGlmeSIec3RhZmZAcmVjcnVpdG1pbGl0YXJ5LmNvbToMQGNsb3NlZEY6CkB1c2VkbzoIU2V0BjoKQGhhc2h7ACIPc2Vzc2lvbl9pZCIlNTMyNDM0OTgzYWM4Njg0ZGI1YWJkMTkxNGM4Y2I5MGU%3D--1479d6e117089501e583a6438dbc20c674a52ec5; path=/; HttpOnly
+      content-type: 
+      - application/json; charset=utf-8
+      x-runtime: 
+      - "0.856119"
+      etag: 
+      - "\"701e1554e46c9be0e7947211103a1a98\""
+      x-ua-compatible: 
+      - IE=Edge
+      date: 
+      - Wed, 29 Feb 2012 17:43:49 GMT
+    body: "{\"updated_at\":\"2012-02-29T17:43:50Z\",\"first_name\":\"Staff\",\"confirmed_at\":\"2012-02-29T17:30:31Z\",\"single_access_token\":\"Bdrc3t1LaiWtygbJ4jD6\",\"phone\":null,\"persistence_token\":\"94e692c95098e4fa52343b0db9c727a508631177a0866efe7f2399aaf91287f25fea5acbf802a2859a7bdb5bdd5ff3f5d1a7d0ef0d34db36edc007d25ad66903\",\"perishable_token\":\"UklFIfMpmzwhM5wBksC\",\"email_md5\":\"3e67fa7c8045d085e66a51deee26cbc4\",\"agreement_acknowledged_at\":null,\"id\":1,\"email_invalid_at\":null,\"email\":\"staff@recruitmilitary.com\",\"crypted_password\":\"488c792fde1cbada5de4daaaa39f793178481091b332d2dc0cfc127cdfcb963484eeda7b7528b8be6a5f2ddf3acff53bd4a37f5c3fb46c63d1c8f2f2e358194b\",\"secret_id\":\"dd9d6ba27b0658839f77c4b28c0bc36d\",\"searchable\":false,\"last_login_at\":null,\"confirmation_token\":\"5fUc6WJj2olo5tvxb7d6\",\"agreement_initials\":null,\"last_name\":\"McStafforson\",\"last_login_ip\":null,\"current_login_at\":null,\"unsubscribed_at\":null,\"primary_role_id\":3,\"hidden_at\":null,\"created_at\":\"2012-02-29T17:30:31Z\",\"password_salt\":\"3GOxv9V06wio9JoZERUD\",\"login_count\":0,\"last_request_at\":\"2012-02-29T17:43:50Z\",\"current_login_ip\":null}"
     http_version: "1.1"

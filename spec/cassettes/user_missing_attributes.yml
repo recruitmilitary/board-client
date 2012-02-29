@@ -3,7 +3,7 @@
   request: !ruby/struct:VCR::Request 
     method: :post
     uri: http://localhost:3000/api/v1/users
-    body: user_credentials=Bdrc3t1LaiWtygbJ4jD6&first_name=Steve&last_name=Jobs&password=password&email=&primary_role_id=1&password_confirmation=password
+    body: first_name=Steve&primary_role_id=1&last_name=Jobs&password_confirmation=password&password=password&user_credentials=Bdrc3t1LaiWtygbJ4jD6&email=
     headers: 
       content-type: 
       - application/x-www-form-urlencoded
@@ -12,19 +12,19 @@
       code: 422
       message: 
     headers: 
-      x-ua-compatible: 
-      - IE=Edge
-      content-type: 
-      - application/json; charset=utf-8
-      date: 
-      - Mon, 29 Aug 2011 18:19:06 GMT
-      x-runtime: 
-      - "0.440739"
-      set-cookie: 
-      - _board_session=BAh7BiIPc2Vzc2lvbl9pZCIlZGY0ZjVjMjY1ZWM2ZDI3YWRjZjcyNjIzMzc5MGU2MGM%3D--6907332cd363911c570608eb0c7a7c216db988d8; path=/; HttpOnly
       cache-control: 
       - no-cache
-      transfer-encoding: 
-      - chunked
-    body: "{\"errors\":{\"email\":[\"is too short (minimum is 6 characters)\",\"is invalid\",\"can't be blank\"]}}"
+      content-length: 
+      - "52"
+      set-cookie: 
+      - _board_session=BAh7ByIKZmxhc2hvOiVBY3Rpb25EaXNwYXRjaDo6Rmxhc2g6OkZsYXNoSGFzaAk6CUBub3cwOg1AZmxhc2hlc3sGOhFraXNzX21ldHJpY3NbBnsGOg1pZGVudGlmeSIec3RhZmZAcmVjcnVpdG1pbGl0YXJ5LmNvbToMQGNsb3NlZEY6CkB1c2VkbzoIU2V0BjoKQGhhc2h7ACIPc2Vzc2lvbl9pZCIlMmI3ZDhlZWQwMDJkYTQ5OTFhNjg3ODYyNGEzMTg1ZjE%3D--0b428db9796e5d18fc942f32d3e7c48b22e96442; path=/; HttpOnly
+      content-type: 
+      - application/json; charset=utf-8
+      x-runtime: 
+      - "0.917446"
+      x-ua-compatible: 
+      - IE=Edge
+      date: 
+      - Wed, 29 Feb 2012 17:43:48 GMT
+    body: "{\"errors\":{\"email\":[\"is invalid\",\"can't be blank\"]}}"
     http_version: "1.1"

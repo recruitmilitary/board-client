@@ -3,7 +3,7 @@
   request: !ruby/struct:VCR::Request 
     method: :post
     uri: http://localhost:3000/api/v1/users
-    body: user_credentials=Bdrc3t1LaiWtygbJ4jD6&first_name=Steve&last_name=Jobs&password=password&email=steve%40apple.com&primary_role_id=1&password_confirmation=password
+    body: first_name=Steve&primary_role_id=1&last_name=Jobs&password_confirmation=password&password=password&user_credentials=Bdrc3t1LaiWtygbJ4jD6&email=steve%40apple.com
     headers: 
       content-type: 
       - application/x-www-form-urlencoded
@@ -12,19 +12,19 @@
       code: 422
       message: 
     headers: 
-      x-ua-compatible: 
-      - IE=Edge
-      content-type: 
-      - application/json; charset=utf-8
-      date: 
-      - Mon, 29 Aug 2011 18:19:06 GMT
-      x-runtime: 
-      - "0.785088"
-      set-cookie: 
-      - _board_session=BAh7BiIPc2Vzc2lvbl9pZCIlZDAzMzdmNTU5NzYyYzkzMzU1ZmI1NjFiYjkyM2EzNWM%3D--5533bb99278b3b1a6da79233bc06fff59340ac7e; path=/; HttpOnly
       cache-control: 
       - no-cache
-      transfer-encoding: 
-      - chunked
+      content-length: 
+      - "41"
+      set-cookie: 
+      - _board_session=BAh7ByIKZmxhc2hvOiVBY3Rpb25EaXNwYXRjaDo6Rmxhc2g6OkZsYXNoSGFzaAk6CUBub3cwOg1AZmxhc2hlc3sGOhFraXNzX21ldHJpY3NbBnsGOg1pZGVudGlmeSIec3RhZmZAcmVjcnVpdG1pbGl0YXJ5LmNvbToMQGNsb3NlZEY6CkB1c2VkbzoIU2V0BjoKQGhhc2h7ACIPc2Vzc2lvbl9pZCIlOTQxZmE2YmNhNTU3ZjBjZTkxOWE1MDNmYmI5YTllN2M%3D--77ec6622436c252521948f9269bde84a19755bc0; path=/; HttpOnly
+      content-type: 
+      - application/json; charset=utf-8
+      x-runtime: 
+      - "0.882446"
+      x-ua-compatible: 
+      - IE=Edge
+      date: 
+      - Wed, 29 Feb 2012 17:43:47 GMT
     body: "{\"errors\":{\"email\":[\"is already taken\"]}}"
     http_version: "1.1"
