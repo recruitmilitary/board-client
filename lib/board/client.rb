@@ -1,5 +1,6 @@
 require 'yajl'
 require 'hashie/mash'
+require 'certified'
 
 require 'board/client/version'
 require 'board/client/request'

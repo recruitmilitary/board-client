@@ -1,7 +1,6 @@
 require 'uri'
 require 'net/http'
 require 'net/https'
-require 'certified'
 
 module Board
   module Client::Request
