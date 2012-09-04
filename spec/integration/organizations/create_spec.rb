@@ -18,7 +18,7 @@ describe 'Organization Create' do
     it 'creates the organization' do
       organization = create_organization
 
-      organization.id.should_not be_blank
+      organization.id.should_not be_nil
       organization.name.should == "Nike"
       organization.description.should == "<h1>Nike Shoes</h1>"
       organization.website.should == "http://nike.com"
