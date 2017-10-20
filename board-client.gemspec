@@ -19,11 +19,12 @@ Gem::Specification.new do |s|
   s.executables   = `git ls-files -- bin/*`.split("\n").map{ |f| File.basename(f) }
   s.require_paths = ["lib"]
 
-  s.add_dependency 'rest-client', '~> 1.6.1'
+  s.add_dependency 'rest-client', '>= 1.6.1'
   s.add_dependency 'yajl-ruby',   '>= 0.7.7'
   s.add_dependency 'hashie',      '>= 1.2.0'
   s.add_dependency 'certified',   '~> 0.1.1'
 
+  s.add_development_dependency 'rake'
   s.add_development_dependency 'rspec', '~> 2.6.0'
   s.add_development_dependency 'vcr', '~> 1.11.1'
   s.add_development_dependency 'webmock', '~> 1.7.4'
